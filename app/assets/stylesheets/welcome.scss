@@ -1,0 +1,50 @@
+@font-face {
+  font-family: "Moon Light";
+  src: url('/assets/MoonLight.otf');
+}
+.welcome-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.welcome-container img {
+  width:25%;
+  margin-bottom:20px;
+}
+
+.welcome-container img:hover {
+  transform: scale(1.1, 1.1);
+}
+
+.welcome-container p {
+  margin: 0px;
+}
+
+.title {
+  font-size: 100px;
+  font-family: Moon Light;
+  color:black;
+}
+
+.title:hover {
+  color:#7fffd4;
+}
+
+.subtitle {
+  font-size: 60px;
+  font-family: Moon Light;
+  color:#B6A8A8;
+}
+
+.subtitle:hover {
+  color:#7fffd4;
+}
+
+a {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+
+}

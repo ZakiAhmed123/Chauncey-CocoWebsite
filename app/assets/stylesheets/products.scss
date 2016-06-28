@@ -1,0 +1,124 @@
+body {
+  margin:0px;
+}
+// LOOKBOOK
+.header {
+  font-family: Moon Light;
+  font-size: 40px;
+  letter-spacing: 10px;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 2px solid black;
+  margin:16px;
+  padding-bottom: 5px;
+  display:flex;
+  flex-direction: column;
+}
+.header:hover {
+  color:#7fffd4;
+}
+
+.header p {
+  font-size: 30px;
+  color:#B6A8A8;
+}
+
+.header p:hover {
+  color:#7fffd4;
+
+}
+
+.header a {
+  display:flex;
+  flex-direction: column;
+  color:black;
+}
+
+.header a:hover {
+  color:#7fffd4;
+}
+
+.sidebar {
+  display:flex;
+  flex-direction: column;
+  width:15%;
+  font-family: Moon Light;
+  align-items: flex-start;
+  padding-left: 10px;
+  font-size: 25px;
+}
+
+.sidebar a {
+  color:black;
+  text-decoration: none;
+}
+
+.sidebar a:hover {
+  color:#7fffd4;
+}
+
+.sidebar i:hover {
+  color:#7fffd4;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding:0px;
+  margin:0px;
+}
+
+.sidebar ul li {
+  font-family: Moon Light;
+  margin:5px 0 5px 0;
+}
+
+.lookbook-container {
+  display:flex;
+}
+
+.my-slider img {
+  width:100%;
+  max-width:500px;
+}
+
+.my-slider {
+  width:60%;
+}
+
+
+.unslider {
+  width:85%;
+}
+
+.unslider{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+// COLLECTION
+.img-grid {
+  display:flex;
+  width:85%;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.column {
+margin-right:1.5%;
+display: flex;
+flex-direction: column;
+width:25%;
+}
+
+.column img {
+  margin-bottom: 16px;
+  width:auto;
+  height:auto;
+  max-width: 347px;
+}
