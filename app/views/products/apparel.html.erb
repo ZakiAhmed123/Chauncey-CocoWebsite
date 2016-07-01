@@ -1,0 +1,54 @@
+<div class="header">
+  <%=link_to home_path do%>Chauncey & Coco
+  <p>
+    Handmade in HTX
+  </p><%end%>
+</div>
+<div class="lookbook-container">
+
+  <div class="sidebar">
+    <ul>
+      <li>
+        <%= link_to collection_path do%>COLLECTION
+        <%end%>
+      </li>
+      <li>
+        <%=link_to apparel_path do%>APPAREL<%end%>
+      </li>
+      <li>
+        <%=link_to gifts_path do %>GIFTS<%end%>
+      </li>
+      <li>
+        <%=link_to jewelry_path do%>JEWELRY<%end%>
+      </li>
+      <li>
+        <%=link_to about_path do%>
+        ABOUT US<%end%>
+      </li>
+      <li>
+        <%=link_to contact_path do%>CONTACT US<%end%>
+      </li>
+      <li>
+        <%=link_to policies_path do%>POLICIES<%end%>
+      </li>
+      <li>
+        <i class="fa fa-shopping-cart" aria-hidden="true"></i>(CART)
+      </li>
+    </ul>
+
+  </div>
+  <div class="apparel-container">
+    <img src="/assets/city.jpg" alt="" class="apparel-image-header" />
+  <div class="apparel_list">
+<% @products.each do |product| %>
+<div class="list_item">
+<%= image_tag "#{product.img_file}.jpg", {:class => "apparel_picture"}%>
+<p class="list-item-title">"<%=product.item %>"</p>
+<p class="list-item-price">$<%= product.price.to_f %></p>
+</div>
+<%end%>
+
+</div>
+</div>
+
+</div>
