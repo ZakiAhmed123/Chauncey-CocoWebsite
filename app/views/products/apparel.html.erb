@@ -39,12 +39,13 @@
   <div class="apparel_list">
 <% @products.each do |product| %>
 <div class="list_item">
+<%= link_to "/apparel/#{product.pid}" do %>
 <%= image_tag "#{product.img_file}.jpg", {:class => "apparel_picture"}%>
 <p class="list-item-title"><%=product.item %></p>
 <p class="list-item-price">$<%= product.price.to_f %></p>
 </div>
 <%end%>
-
+<%end%>
 </div>
 </div>
 
@@ -52,8 +53,8 @@
 <div class="footer-container">
   <div class="follow">
     <p> Follow us </p>
-<p><i class="fa fa-instagram" aria-hidden="true"></i>
-<i class="fa fa-facebook-square" aria-hidden="true"></i></p>
+<p><i class="fa fa-instagram fa-lg" aria-hidden="true"></i>
+<i class="fa fa-facebook-square fa-lg" aria-hidden="true"></i></p>
   </div>
 <div class="footer">
   <%=link_to policies_path do%>Privacy Policy<%end%> | Terms of Use | Refunds & Exchanges | &copy; chaunceyandcoco.com All Rights Reserved

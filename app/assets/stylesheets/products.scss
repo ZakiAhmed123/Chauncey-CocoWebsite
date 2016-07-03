@@ -2,6 +2,15 @@
   font-family: "Helvetica Light";
   src: url('/assets/Helvetica-Light.otf');
 }
+@font-face {
+  font-family: "Helvetica Narrow";
+  src: url('/assets/Helvetica-Narrow.otf');
+}
+
+@font-face {
+  font-family: "SF Light";
+  src: url('/assets/SanFranciscoDisplay-Ultralight.otf');
+}
 
 
 body {
@@ -14,6 +23,7 @@ body {
   font-weight: bold;
   text-align: left;
   padding-left: 15px;
+  margin-top: 70px;
 }
 .footer-container a {
   color:#888888;
@@ -24,6 +34,12 @@ body {
 
 .footer {
   color:#888888;
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 15px;
+}
+.follow {
+  margin-top: 10px;
 }
 // LOOKBOOK
 .header {
@@ -67,7 +83,6 @@ body {
   display:flex;
   flex-direction: column;
   width:15%;
-  font-family: Moon Light;
   align-items: flex-start;
   padding-left: 16px;
   font-size: 25px;
@@ -164,12 +179,26 @@ width:25%;
   justify-content: center;
 }
 .list_item {
-  width:25%;
+  margin-bottom: 40px;
+}
+.list_item a{
+  width:100%;
+  height:100%;
+  max-width: 350px;
   display: flex;
   flex-direction: column;
   font-family: Helvetica Light;
-  margin-right: 30px;
-  margin-bottom: 60px;
+  color:#424242;
+  margin: 0px 10px 10px 10px;
+
+}
+
+.list_item:hover {
+  border:1px solid #88889D;
+}
+
+.list_item img:hover {
+  opacity: 0.8
 }
 
 
@@ -192,17 +221,54 @@ width:25%;
   max-width: 350px;
   align-self: center;
 }
+// APPAREL VIEW
+.view-container {
+  display: flex;
+  width:75%;
+}
+.view_picture {
+  width:45%;
+  max-width:1050px;
+}
+.item-info {
+  font-family: SF Light;
+  margin-left: 20px;
+  width:30%;
+  color:#333333;
+}
+.item {
+  font-weight: bold;
+  margin:0px;
+  font-size: 40px;
+}
+
+.addtocart {
+  width:200px;
+  height:60px;
+  border-radius: 3px;
+  font-family: Helvetica Narrow;
+  font-size: 18px;
+  text-align: center;
+  line-height: 60px;
+  font-weight: bold;
+  border:3px solid #333333;
+}
+
+.addtocart:hover {
+background-color: #333333;
+color:white;
+}
 
 // ABOUT
 .about-container {
-  font-family: Helvetica Light;
+  font-family: SF Light;
   font-size: 25px;
   margin-right: 15px;
   color:#424242;
   display: flex;
   flex-wrap: wrap;
   width:83%;
-
+  font-weight: bold;
 }
 
 .about-container img {
@@ -227,5 +293,5 @@ width:25%;
 }
 
 .contact-p {
-  font-family: Helvetica Light;
+  font-family: SF Light;
 }

@@ -1,5 +1,5 @@
 <div class="header">
-  <%=link_to home_path do%>Chauncey & Coco
+  <%=link_to home_path do%>Chauncey AND Coco
   <p>
     Handmade in HTX
   </p><%end%>
@@ -9,8 +9,7 @@
   <div class="sidebar">
     <ul>
       <li>
-        <%= link_to collection_path do%>COLLECTION
-        <%end%>
+        <%= link_to collection_path do%>COLLECTION<%end%>
       </li>
       <li>
         <%=link_to apparel_path do%>APPAREL<%end%>
@@ -47,6 +46,22 @@
       <li><img src="/assets/lb5.jpg" alt=""/></li>
       <li><img src="/assets/lb6.jpg" alt=""/></li>
     </ul>
+  </div>
+
+</div>
+<div class="footer-container">
+  <div class="follow">
+    <p>
+      Follow us
+    </p>
+    <p>
+      <i class="fa fa-instagram fa-lg" aria-hidden="true"></i>
+      <i class="fa fa-facebook-square fa-lg" aria-hidden="true"></i>
+    </p>
+  </div>
+  <div class="footer">
+    <%=link_to policies_path do%>Privacy Policy<%end%>| Terms of Use | Refunds & Exchanges | &copy; chaunceyandcoco.com All Rights Reserved
+
   </div>
 
 </div>

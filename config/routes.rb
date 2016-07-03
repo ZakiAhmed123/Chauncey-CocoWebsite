@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   get 'home' => 'products#home', as: :home
   get 'collection' => 'products#collection', as: :collection
   get 'apparel' => 'products#apparel', as: :apparel
+  get 'apparel/:pid' => 'products#apparel_view', as: :view
   get 'gifts' => 'products#gifts', as: :gifts
   get 'jewelry' => 'products#jewelry', as: :jewelry
   get 'about-us' => 'products#about', as: :about
