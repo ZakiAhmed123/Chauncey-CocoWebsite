@@ -1,5 +1,5 @@
 <div class="header">
-  <%=link_to home_path do%>Chauncey & Coco
+  <%=link_to home_path do%>Chauncey And Coco
   <p>
     Handmade in HTX
   </p><%end%>
@@ -29,9 +29,6 @@
         <%=link_to contact_path do%>CONTACT US<%end%>
       </li>
       <li>
-        <%=link_to policies_path do%>POLICIES<%end%>
-      </li>
-      <li>
         <i class="fa fa-shopping-cart" aria-hidden="true"></i>(CART)
       </li>
     </ul>
@@ -43,12 +40,23 @@
 <% @products.each do |product| %>
 <div class="list_item">
 <%= image_tag "#{product.img_file}.jpg", {:class => "apparel_picture"}%>
-<p class="list-item-title">"<%=product.item %>"</p>
+<p class="list-item-title"><%=product.item %></p>
 <p class="list-item-price">$<%= product.price.to_f %></p>
 </div>
 <%end%>
 
 </div>
+</div>
+
+</div>
+<div class="footer-container">
+  <div class="follow">
+    <p> Follow us </p>
+<p><i class="fa fa-instagram" aria-hidden="true"></i>
+<i class="fa fa-facebook-square" aria-hidden="true"></i></p>
+  </div>
+<div class="footer">
+  <%=link_to policies_path do%>Privacy Policy<%end%> | Terms of Use | Refunds & Exchanges | &copy; chaunceyandcoco.com All Rights Reserved
 </div>
 
 </div>
