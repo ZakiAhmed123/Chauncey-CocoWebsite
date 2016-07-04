@@ -35,14 +35,14 @@
 
   </div>
   <div class="apparel-container">
-    <img src="/assets/city.jpg" alt="" class="apparel-image-header" />
+    <img src="/assets/city4.jpg" alt="" class="apparel-image-header" />
   <div class="apparel_list">
 <% @products.each do |product| %>
 <div class="list_item">
 <%= link_to "/apparel/#{product.pid}" do %>
 <%= image_tag "#{product.img_file}.jpg", {:class => "apparel_picture"}%>
 <p class="list-item-title"><%=product.item %></p>
-<p class="list-item-price">$<%= product.price.to_f %></p>
+<p class="list-item-price">$<%= product.price.to_i %></p>
 </div>
 <%end%>
 <%end%>

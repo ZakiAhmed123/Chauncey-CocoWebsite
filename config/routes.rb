@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   get 'apparel/:pid' => 'products#apparel_view', as: :view
   get 'gifts' => 'products#gifts', as: :gifts
   get 'jewelry' => 'products#jewelry', as: :jewelry
+  get 'jewelry/:jid' => 'products#jewelry_view', as: :jewelry_view
   get 'about-us' => 'products#about', as: :about
   get 'contact-us' => 'products#contact', as: :contact
   get 'policies' => 'products#policies', as: :policies

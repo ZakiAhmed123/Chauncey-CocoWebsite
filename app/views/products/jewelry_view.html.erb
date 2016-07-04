@@ -34,24 +34,24 @@
     </ul>
 
   </div>
-  <div class="apparel-container">
-    <img src="/assets/shoes.jpg" alt="" class="apparel-image-header" />
-  <div class="apparel_list">
-<% @jewelrys.each do |jewelry| %>
-<div class="list_item">
-<%= link_to "/jewelry/#{jewelry.jid}" do %>
-<%= image_tag "#{jewelry.img_file}.jpg", {:class => "apparel_picture"}%>
-<p class="list-item-title"><%=jewelry.item %></p>
-<p class="list-item-price">$<%= jewelry.price.to_f%></p>
+  <div class="view-container">
+<%= image_tag "#{@jewelry.img_file}.jpg", {:class => "view_picture"} %>
+<div class="item-info">
+  <p class="item"><%= @jewelry.item%><p>
+    <p style="font-size:25px;">
+      <%= @jewelry.description%>
+    </p>
+    <p style="font-size:30px;">
+      $<%= @jewelry.price.to_i %>
+    </p>
+
+    <div class="addtocart">
+      ADD TO CART
+    </div>
 </div>
-<%end%>
-<%end%>
-</div>
-</div>
+  </div>
 
 </div>
-
-
 <div class="footer-container">
   <div class="follow">
     <p> Follow us </p>

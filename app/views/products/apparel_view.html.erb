@@ -42,7 +42,7 @@
       <%= @product.description%>
     </p>
     <p style="font-size:30px;">
-      $<%= @product.price %>
+      $<%= @product.price.to_i %>
     </p>
 
     <div class="addtocart">
@@ -50,7 +50,6 @@
     </div>
 </div>
   </div>
-
 
 </div>
 <div class="footer-container">
