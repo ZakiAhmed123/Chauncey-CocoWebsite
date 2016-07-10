@@ -226,16 +226,16 @@ width:25%;
 // APPAREL VIEW
 .view-container {
   display: flex;
-  width:75%;
+  width:85%;
 }
 .view_picture {
-  width:45%;
+  width:40%;
   max-width:1050px;
 }
 .item-info {
   font-family: SF Light;
   margin-left: 20px;
-  width:30%;
+  width:40%;
   color:#333333;
 }
 .item {
@@ -259,6 +259,10 @@ width:25%;
 .addtocart:hover {
 background-color: #333333;
 color:white;
+}
+
+a.trigger {
+  margin-bottom: 20px;
 }
 
 // ABOUT

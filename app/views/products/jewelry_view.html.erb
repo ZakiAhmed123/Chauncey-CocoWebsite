@@ -44,10 +44,38 @@
     <p style="font-size:30px;">
       $<%= @jewelry.price.to_i %>
     </p>
+    <p style=margin:5px;font-size:20px;>
+      Quantity
+    </p>
 
-    <div class="addtocart">
+    <select class="turnintodropdown" name="">
+    <option value="" disabled selected>Select your option</option>
+    <option value=1>1</option>
+    <option value=1>2</option>
+    <option value=1>3</option>
+    <option value=1>4</option>
+    <option value=1>5</option>
+    </select>
+
+
+<div class="addtocart">
       ADD TO CART
     </div>
+    <p>
+      Shipping estimate: $3.00
+    </p>
+    <p style="font-size:20px;">
+      &#8226;<%= @jewelry.bullet_1 %>
+    </p>
+    <p style="font-size:20px;">
+      &#8226;<%= @jewelry.bullet_2 %>
+    </p>
+    <p style="font-size:20px;">
+      &#8226;<%= @jewelry.bullet_3 %>
+    </p>
+    <p style="font-size:20px;">
+      &#8226;<%= @jewelry.bullet_4 %>
+    </p>
 </div>
   </div>
 

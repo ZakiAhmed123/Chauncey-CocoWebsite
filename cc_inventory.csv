@@ -1,7 +1,7 @@
-pid,item,description,price,img_file,category,xs,s,m,l,xl
-101,Dope White,DOPE Unisex White Preshrunk Cotton Tee,21,dope_white,apparel,0,2,4,5,3
-102,Dope Grey,DOPE Women’s Fitted Organic Preshrunk Cotton Grey Tee,21,dope_grey,apparel,2,6,0,0,0
-103,Drake & 40 Black,Drake Unisex Cotton Black Tee,21,drake_black,apparel,2,2,1,2,1
-104,Drake & 40 Navy,Drake Women’s Fitted Organic Cotton Navy Tee,21,drake_navy,apparel,2,19,0,3,0
-105,H-Town Vicious Black,H-Town Vicious Women’s Cotton Fitted White Tee,21,htown_vicious_black,apparel,4,5,4,5,3
-106,H-Town Vicious White,H-Town Vicious Women’s Cotton Black Tee,16,htown_vicious_white,apparel,4,0,0,0,0
+pid,item,description,price,img_file,xs,s,m,l,xl
+101,Dope White,DOPE Unisex White Preshrunk Cotton Tee,21,dope_white,0,2,4,5,3
+102,Dope Grey,DOPE Women’s Fitted Organic Preshrunk Cotton Grey Tee,21,dope_grey,2,6,0,0,0
+103,Drake & 40 Black,Drake Unisex Cotton Black Tee,21,drake_black,2,2,1,2,1
+104,Drake & 40 Navy,Drake Women’s Fitted Organic Cotton Navy Tee,21,drake_navy,2,19,0,3,0
+105,H-Town Vicious Black,H-Town Vicious Women’s Cotton Fitted White Tee,21,htown_vicious_black,4,5,4,5,3
+106,H-Town Vicious White,H-Town Vicious Women’s Cotton Black Tee,16,htown_vicious_white,4,0,0,0,0

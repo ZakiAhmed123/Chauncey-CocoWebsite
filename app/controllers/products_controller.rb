@@ -55,7 +55,7 @@ class ProductsController < ApplicationController
       product.l = row.to_h["l"]
       product.xl = row.to_h["xl"]
       @products << product
-    end
+  end
     @products
 end
 
@@ -69,10 +69,13 @@ def fetch_jewelry
     jewelry.price = row.to_h["price"]
     jewelry.size = row.to_h["size"]
     jewelry.img_file = row.to_h["img_file"]
+    jewelry.bullet_1 = row.to_h["bullet_1"]
+    jewelry.bullet_2 = row.to_h["bullet_2"]
+    jewelry.bullet_3 = row.to_h["bullet_3"]
+    jewelry.bullet_4 = row.to_h["bullet_4"]
     @jewelry << jewelry
 end
 @jewelry
 end
-
 
 end
