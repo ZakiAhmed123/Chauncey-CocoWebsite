@@ -18,6 +18,13 @@ class ProductsController < ApplicationController
   end
 
   def gifts
+    @gifts = fetch_gifts
+  end
+
+  def gifts_view
+    @gifts = fetch_gifts
+
+    @gift = @gifts.find {|a| a.gid == params[:gid]}
   end
 
   def jewelry
@@ -48,7 +55,6 @@ class ProductsController < ApplicationController
       product.description = row.to_h["description"]
       product.price = row.to_h["price"]
       product.img_file = row.to_h["img_file"]
-      product.category = row.to_h["category"]
       product.xs = row.to_h["xs"]
       product.s = row.to_h["s"]
       product.m = row.to_h["m"]
@@ -67,7 +73,6 @@ def fetch_jewelry
     jewelry.item = row.to_h["item"]
     jewelry.description = row.to_h["description"]
     jewelry.price = row.to_h["price"]
-    jewelry.size = row.to_h["size"]
     jewelry.img_file = row.to_h["img_file"]
     jewelry.bullet_1 = row.to_h["bullet_1"]
     jewelry.bullet_2 = row.to_h["bullet_2"]
@@ -76,6 +81,24 @@ def fetch_jewelry
     @jewelry << jewelry
 end
 @jewelry
+end
+
+def fetch_gifts
+  @gifts=[]
+  CSV.foreach("gift_inventory.csv", headers:true) do |row|
+    gift=Product.new
+    gift.gid = row.to_h["gid"]
+    gift.item = row.to_h["item"]
+    gift.description = row.to_h["description"]
+    gift.price = row.to_h["price"]
+    gift.img_file = row.to_h["img_file"]
+    gift.bullet_1 = row.to_h["bullet_1"]
+    gift.bullet_2 = row.to_h["bullet_2"]
+    gift.bullet_3 = row.to_h["bullet_3"]
+    gift.bullet_4 = row.to_h["bullet_4"]
+    @gifts << gift
+end
+@gifts
 end
 
 end

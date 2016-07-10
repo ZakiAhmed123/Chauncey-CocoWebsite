@@ -35,7 +35,9 @@
 
   </div>
   <div class="view-container">
+    <div class="view-image-container" >
     <%= image_tag "#{@product.img_file}.jpg", {:class => "view_picture"} %>
+  </div>
     <div class="item-info">
       <p class="item"><%= @product.item%>
         <p>
@@ -43,7 +45,7 @@
             <%= @product.description%>
           </p>
           <p style="font-size:30px;">
-            $<%= @product.price.to_i %>
+            <%= number_to_currency(@product.price.to_i) %>
           </p>
           <p style=margin:5px;font-size:20px;>
             Size
@@ -52,43 +54,47 @@
             <option value="" disabled selected>Select your Size</option>
             <% if @product.xs.to_i < 1 %>
             <%else%>
-            <option value=xs>xs</option>
+            <option value=xs>XS</option>
             <%end%>
 
             <% if @product.s.to_i < 1 %>
             <%else%>
-            <option value=s>s</option>
+            <option value=s>S</option>
             <%end%>
 
             <% if @product.m.to_i < 1 %>
             <%else%>
-            <option value=m>m</option>
+            <option value=m>M</option>
             <%end%>
 
             <% if @product.l.to_i < 1 %>
             <%else%>
-            <option value=l>l</option>
+            <option value=l>L</option>
             <%end%>
 
             <% if @product.xl.to_i < 1 %>
             <%else%>
-            <option value=xl>xl</option>
+            <option value=xl>XL</option>
             <%end%>
 
           </select>
 
-          <p style=margin:5px;font-size:20px;>
+          <p style=margin:5px;font-size:25px;>
             Quantity
           </p>
-
+<!-- <% if @product.xs.to_i < @product.quantity.to_i %>
+<div class="">
+We only have <%=@product.xs.to_i%> in stock
+</div>
+<%end%> -->
           <select>
-    <option value="" disabled selected>Select your Quantity</option>
-    <option value=1>1</option>
-    <option value=1>2</option>
-    <option value=1>3</option>
-    <option value=1>4</option>
-    <option value=1>5</option>
-    </select>
+            <option value="" disabled selected>Select your Quantity</option>
+            <option value=quantity>1</option>
+            <option value=2>2</option>
+            <option value=3>3</option>
+            <option value=4>4</option>
+            <option value=5>5</option>
+          </select>
 
           <div class="addtocart">
             ADD TO CART

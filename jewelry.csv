@@ -1,12 +1,12 @@
-jid,item,description,price,size,img_file,bullet_1,bullet_2,bullet_3,bullet_4
-201,The Agatha,Blue + Pink + Yellow Wooden Geometric Bead Necklace,11,15,agatha,Made out of wood and thus may vary in color,Waxed cotton cord and faux leather clasp,handle gently,Packed in a gift box
-202,The Amaranthine,Mint + Mink Wooden Geometric Bead Necklace,11,15,amaranthine,Made out of wood and thus may vary in color,Waxed cotton cord and faux leather clasp,Handle gently,Packed in a gift box
-203,The Moss,Teal + Pink + White Wooden Geometric Bead Necklace,11,15,moss,Made out of wood and thus may vary in color,Waxed cotton cord and faux leather clasp,Handle gently,Packed in a gift box
-204,The Pacific,Blue + Grey + Pink Wooden Geometric Bead Necklace,11,15,pacific,Made out of wood and thus may vary in color,Waxed cotton cord and faux leather clasp,Handle gently,Packed in a gift box
-205,The Midnight,Navy + Grey + White Wooden Geometric Bead Necklace,11,15,midnight,Made out of wood and thus may vary in color,Waxed cotton rod and faux leather clasp,Handle gently,Packed in a gift box
-206,The Cavalcanti,Mint + Yellow + Grey Wooden Geometric Bead Necklace,11,15,cavalcanti,Made out of wood and thus may vary in color,Waxed cotton cord and faux leather clasp,Handle gently,Packed in a gift box
-207,The Wes,Yellow Wood Earrings,9.50,2cm x 1 cm,wes,
-208,The Satellite,Black Wood Earrings,9.50,2cm x 1 cm,satellite,
-209,The Suzy,Yellow and Turquoise Wood Earrings,9.50,2cm x 1cm,suzy,
-210,The Margot,Navy and Light Pink Wood Earrings,9.50,2cm x 1cm,margot,
-211,The Verda,Teal Wood Earrings,9.50,2cm x 1cm,verda,
+jid,item,description,price,size,img_file,bullet_1,bullet_2,bullet_3,bullet_4,quantity
+101,The Agatha,Blue + Pink + Yellow Wooden Geometric Bead Necklace,11,15,agatha,Made out of wood and thus may vary in color,Waxed cotton cord and faux leather clasp,handle gently,Packed in a gift box(Final Sale),10
+102,The Amaranthine,Mint + Mink Wooden Geometric Bead Necklace,11,15,amaranthine,Made out of wood and thus may vary in color,Waxed cotton cord and faux leather clasp,Handle gently,Packed in a gift box(Final Sale),10
+103,The Moss,Teal + Pink + White Wooden Geometric Bead Necklace,11,15,moss,Made out of wood and thus may vary in color,Waxed cotton cord and faux leather clasp,Handle gently,Packed in a gift box(Final Sale),10
+104,The Pacific,Blue + Grey + Pink Wooden Geometric Bead Necklace,11,15,pacific,Made out of wood and thus may vary in color,Waxed cotton cord and faux leather clasp,Handle gently,Packed in a gift box(Final Sale),10
+105,The Midnight,Navy + Grey + White Wooden Geometric Bead Necklace,11,15,midnight,Made out of wood and thus may vary in color,Waxed cotton rod and faux leather clasp,Handle gently,Packed in a gift box(Final Sale),10
+106,The Cavalcanti,Mint + Yellow + Grey Wooden Geometric Bead Necklace,11,15,cavalcanti,Made out of wood and thus may vary in color,Waxed cotton cord and faux leather clasp,Handle gently,Packed in a gift box(Final Sale),10
+107,The Wes,Yellow Wood Earrings,9.50,2cm x 1 cm,wes,Made out of wood and thus may vary in color,High quality surgical steel posts: nickel free,Although the earrings are coated with a clear matte varnish they should be taken off before going under water and showering(Handle gently),Packed in gift box (Final Sale),3
+108,The Satellite,Black Wood Earrings,9.50,2cm x 1 cm,satellite,Made out of wood and thus may vary in color,High quality surgical steel posts: nickel free,Although the earrings are coated with a clear matte varnish they should be taken off before going under water and showering(Handle gently),Packed in gift box (Final Sale),3
+109,The Suzy,Yellow and Turquoise Wood Earrings,9.50,2cm x 1cm,suzy,Made out of wood and thus may vary in color,High quality surgical steel posts: nickel free,Although the earrings are coated with a clear matte varnish they should be taken off before going under water and showering(Handle gently),Packed in gift box (Final Sale),3
+110,The Margot,Navy and Light Pink Wood Earrings,9.50,2cm x 1cm,margot,Made out of wood and thus may vary in color,High quality surgical steel posts: nickel free,Although the earrings are coated with a clear matte varnish they should be taken off before going under water and showering(Handle gently),Packed in gift box (Final Sale),3
+111,The Verda,Teal Wood Earrings,9.50,2cm x 1cm,verda,Made out of wood and thus may vary in color,High quality surgical steel posts: nickel free,Although the earrings are coated with a clear matte varnish they should be taken off before going under water and showering(Handle gently),Packed in gift box (Final Sale),3
