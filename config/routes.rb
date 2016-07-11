@@ -1,18 +1,20 @@
 Rails.application.routes.draw do
 
-  root 'welcome#index'
+  root 'products#home'
 
-  get 'home' => 'products#home', as: :home
   get 'collection' => 'products#collection', as: :collection
-  get 'apparel' => 'products#apparel', as: :apparel
-  get 'apparel/:pid' => 'products#apparel_view', as: :view
-  get 'gifts' => 'products#gifts', as: :gifts
-  get 'gifts/:gid' => 'products#gifts_view', as: :gifts_view
-  get 'jewelry' => 'products#jewelry', as: :jewelry
-  get 'jewelry/:jid' => 'products#jewelry_view', as: :jewelry_view
   get 'about-us' => 'products#about', as: :about
   get 'contact-us' => 'products#contact', as: :contact
   get 'policies' => 'products#policies', as: :policies
+  get 'apparel' => 'products#apparel', as: :products
+  get 'apparel/:pid' => 'products#view', as: :product
+
+  get 'gifts' => 'gifts#index', as: :gifts
+  get 'gifts/:gid' => 'gifts#view', as: :gift
+
+  get 'jewelry' => 'jewels#index', as: :jewels
+  get 'jewelry/:jid' => 'jewels#view', as: :jewel
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

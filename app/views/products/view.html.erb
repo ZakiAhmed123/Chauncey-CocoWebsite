@@ -1,0 +1,125 @@
+<div class="header">
+<%=link_to root_path do%>
+<div class="header-title-container">
+  <p class="header-title">
+    Chauncey AND Coco
+  </p>
+  <p class="header-subtitle">
+    <%= image_tag 'logo.png' %>
+    Handmade in HTX
+    <%= image_tag 'logo.png' %>
+  </p>
+</div>
+<%end%>
+</div>
+
+<div class="lookbook-container">
+
+  <div class="sidebar">
+    <ul>
+      <li>
+        <%= link_to collection_path do%>COLLECTION
+        <%end%>
+      </li>
+      <li>
+        <%=link_to products_path do%>APPAREL<%end%>
+      </li>
+      <li>
+        <%=link_to gifts_path do %>GIFTS<%end%>
+      </li>
+      <li>
+        <%=link_to jewels_path do%>JEWELRY<%end%>
+      </li>
+      <li>
+        <%=link_to about_path do%>ABOUT US<%end%>
+      </li>
+      <li>
+        <%=link_to contact_path do%>CONTACT US<%end%>
+      </li>
+      <li>
+        <i class="fa fa-shopping-cart" aria-hidden="true"></i>(CART)
+      </li>
+    </ul>
+
+  </div>
+  <div class="view-container">
+    <div class="view-image-container" >
+    <%= image_tag "#{@product.img_file}.jpg", {:class => "view_picture"} %>
+  </div>
+    <div class="item-info">
+      <p class="item"><%= @product.item%>
+        <p>
+          <p style="font-size:25px;">
+            <%= @product.description%>
+          </p>
+          <p style="font-size:30px;">
+            <%= number_to_currency(@product.price.to_i) %>
+          </p>
+          <p style=margin:5px;font-size:20px;>
+            Size
+          </p>
+          <%= form_for @product do |product| %>
+
+          <select class="turnintodropdown" name="">
+            <option value="" disabled selected>Select your Size</option>
+            <% if @product.xs.to_i < 1 %>
+            <%else%>
+            <option value=xs>XS</option>
+            <%end%>
+
+            <% if @product.s.to_i < 1 %>
+            <%else%>
+            <option value=s>S</option>
+            <%end%>
+
+            <% if @product.m.to_i < 1 %>
+            <%else%>
+            <option value=m>M</option>
+            <%end%>
+
+            <% if @product.l.to_i < 1 %>
+            <%else%>
+            <option value=l>L</option>
+            <%end%>
+
+            <% if @product.xl.to_i < 1 %>
+            <%else%>
+            <option value=xl>XL</option>
+            <%end%>
+
+          </select>
+
+          <p style=margin:5px;font-size:25px;>
+            Quantity
+          </p>
+<!-- <% if @product.xs.to_i < @product.quantity.to_i %>
+<div class="">
+We only have <%=@product.xs.to_i%> in stock
+</div>
+<%end%> -->
+<p><%= product.number_field :quantity, :value => 1, :max => 5, :min => 1, :class => 'number_field' %></p>
+<%end%>
+
+          <div class="addtocart">
+            ADD TO CART
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="footer-container">
+      <div class="follow">
+        <p>
+          Follow us
+        </p>
+        <p>
+          <i class="fa fa-instagram fa-lg" aria-hidden="true"></i>
+          <i class="fa fa-facebook-square fa-lg" aria-hidden="true"></i>
+        </p>
+      </div>
+      <div class="footer">
+        <%=link_to policies_path do%>Privacy Policy<%end%>
+        | Terms of Use | Refunds & Exchanges | &copy; chaunceyandcoco.com All Rights Reserved
+      </div>
+
+    </div>

@@ -1,0 +1,90 @@
+<div class="header">
+<%=link_to root_path do%>
+<div class="header-title-container">
+  <p class="header-title">
+    Chauncey AND Coco
+  </p>
+  <p class="header-subtitle">
+    <%= image_tag 'logo.png' %>
+    Handmade in HTX
+    <%= image_tag 'logo.png' %>
+  </p>
+</div>
+<%end%>
+</div>
+<div class="lookbook-container">
+
+  <div class="sidebar">
+    <ul>
+      <li>
+        <%= link_to collection_path do%>COLLECTION
+        <%end%>
+      </li>
+      <li>
+        <%=link_to products_path do%>APPAREL<%end%>
+      </li>
+      <li>
+        <%=link_to gifts_path do %>GIFTS<%end%>
+      </li>
+      <li>
+        <%=link_to jewels_path do%>JEWELRY<%end%>
+      </li>
+      <li>
+        <%=link_to about_path do%>
+        ABOUT US<%end%>
+      </li>
+      <li>
+        <%=link_to contact_path do%>CONTACT US<%end%>
+      </li>
+      <li>
+        <i class="fa fa-shopping-cart" aria-hidden="true"></i>(CART)
+      </li>
+    </ul>
+
+  </div>
+  <div class="policies-container">
+<p class="policy-title">POLICIES</p>
+<p class="policy-text">
+  By using this website, you agree to the policies set forth. We may periodically change or update these policies so please check this page before placing an order. We reserve the right to change or update information without prior notice.
+</p>
+<p class="policy-title">USE OF PRODUCTS</p>
+<p class="policy-text">
+Our products are available for purchase for personal use only and not for resale. By placing an order on this website, you certify that you are purchasing our products for personal use only and not for resale. We reserve the right to decline fulfilling orders without explanation.
+</p>
+<p class="policy-title">SHIPPING</p>
+<p class="policy-text">
+We currently only ship to residents living in the United States.
+Products are shipped out within 3-5 business days of order confirmation through USPS first class mail and generally take 2-5 business days to arrive.
+We include a tracking number and delivery confirmation. The tracking number will be sent to you once the item is shipped.
+If your shipping address is not up-to-date and is returned to us, you are responsible for additional shipping charges. We cannot be held responsible for lost items if they show as Delivered to the address you provided.   If you would like faster shipping, insurance, signature confirmation, etc. please e-mail us at chaunceyandcoco@gmail.com BEFORE you purchase as these are NOT included in our basic shipping charge. Buyer is responsible for any additional shipping charges before items are shipped.
+We are not responsible for lost, damaged, or delivered packages to an incorrect address. If you would like to insure your order, please contact us to adjust shipping cost. Please contact the USPS for lost packages.
+</p>
+<p class="policy-title">REFUNDS + EXCHANGES</p>
+<p class="policy-text">
+All jewelry items are final sale
+Refunds and exchanges will be considered on a case by case basis
+We reserve the right to refuse a refund or exchange
+All items are carefully packaged before they are shipped. If your item is somehow damaged in transit, please contact us directly within 5 days of receiving your order.
+</p>
+<p class="policy-title">COPYRIGHT AND TRADEMARKS</p>
+<p class="policy-text">
+All website content including logos, text and graphic images are property of Chauncey and Coco and are protected by United States copyright and trademark laws. Any use of our website, content, images, or information contained therein, including reproduction and internet links, is strictly prohibited without our prior written permission.
+</p>
+</div>
+</div>
+<div class="footer-container">
+  <div class="follow">
+    <p>
+      Follow us
+    </p>
+    <p>
+      <i class="fa fa-instagram fa-lg" aria-hidden="true"></i>
+      <i class="fa fa-facebook-square fa-lg" aria-hidden="true"></i>
+    </p>
+  </div>
+  <div class="footer">
+    <%=link_to policies_path do%>Privacy Policy<%end%>| Terms of Use | Refunds & Exchanges | &copy; chaunceyandcoco.com All Rights Reserved
+
+  </div>
+
+</div>

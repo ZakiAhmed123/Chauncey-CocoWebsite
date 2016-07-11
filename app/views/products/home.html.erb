@@ -1,54 +1,55 @@
 <div class="header">
-  <%=link_to home_path do%>Chauncey AND Coco
-  <p>
-    Handmade in HTX
-  </p><%end%>
-</div>
-<div class="lookbook-container">
-
-  <div class="sidebar">
-    <ul>
-      <li>
-        <%= link_to collection_path do%>COLLECTION<%end%>
-      </li>
-      <li>
-        <%=link_to apparel_path do%>APPAREL<%end%>
-      </li>
-      <li>
-        <%=link_to gifts_path do %>GIFTS<%end%>
-      </li>
-      <li>
-        <%=link_to jewelry_path do%>JEWELRY<%end%>
-      </li>
-      <li>
-        <%=link_to about_path do%>
-        ABOUT US<%end%>
-      </li>
-      <li>
-        <%=link_to contact_path do%>CONTACT US<%end%>
-      </li>
-      <li>
-        <%=link_to policies_path do%>POLICIES<%end%>
-      </li>
-      <li>
-        <i class="fa fa-shopping-cart" aria-hidden="true"></i>(CART)
-      </li>
-    </ul>
-
+  <%=link_to root_path do%>
+  <div class="header-title-container">
+    <p class="header-title">
+      Chauncey AND Coco
+    </p>
+    <p class="header-subtitle">
+      <%= image_tag 'logo.png' %>
+      Handmade in HTX
+      <%= image_tag 'logo.png' %>
+    </p>
   </div>
 
-  <div class="my-slider">
-    <ul>
-      <li><img src="/assets/lb1.jpg" alt=""/></li>
-      <li><img src="/assets/lb2.jpg" alt=""/></li>
-      <li><img src="/assets/lb3.jpg" alt=""/></li>
-      <li><img src="/assets/lb4.jpg" alt=""/></li>
-      <li><img src="/assets/lb5.jpg" alt=""/></li>
-      <li><img src="/assets/lb6.jpg" alt=""/></li>
-    </ul>
+  <%end%>
+  <div class="home-nav">
+    <p>
+      <%= link_to collection_path do%>COLLECTION<%end%>
+    </p>
+    <p>
+      <%=link_to products_path do%>APPAREL<%end%>
+    </p>
+    <p>
+      <%=link_to gifts_path do %>GIFTS<%end%>
+    </p>
+    <p>
+      <%=link_to jewels_path do%>JEWELRY<%end%>
+    </p>
+    <p>
+      <%=link_to about_path do%>ABOUT US<%end%>
+    </p>
+    <p>
+      <%=link_to contact_path do%>CONTACT<%end%>
+    </p>
+    <p>
+      <i class="fa fa-shopping-cart" aria-hidden="true"></i>(CART)
+    </p>
   </div>
-
 </div>
+
+<div class="my-slider">
+  <ul>
+    <li><img src="/assets/bike-wide.jpg" alt=""/></li>
+    <li><img src="/assets/slider2.jpg" alt=""/></li>
+    <li><img src="/assets/slider3.jpg" alt=""/></li>
+    <li><img src="/assets/slider4.jpg" alt=""/></li>
+    <li><img src="/assets/slider1.jpg" alt=""/></li>
+  </ul>
+  <p class="slide-notify">
+    Press <i class="fa fa-chevron-left" aria-hidden="true"></i> & <i class="fa fa-chevron-right" aria-hidden="true"></i> for Slider
+  </p>
+</div>
+
 <div class="footer-container">
   <div class="follow">
     <p>

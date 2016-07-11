@@ -1,9 +1,18 @@
 <div class="header">
-  <%=link_to home_path do%>Chauncey And Coco
-  <p>
+<%=link_to root_path do%>
+<div class="header-title-container">
+  <p class="header-title">
+    Chauncey AND Coco
+  </p>
+  <p class="header-subtitle">
+    <%= image_tag 'logo.png' %>
     Handmade in HTX
-  </p><%end%>
+    <%= image_tag 'logo.png' %>
+  </p>
 </div>
+<%end%>
+</div>
+
 <div class="lookbook-container">
 
   <div class="sidebar">
@@ -13,17 +22,16 @@
         <%end%>
       </li>
       <li>
-        <%=link_to apparel_path do%>APPAREL<%end%>
+        <%=link_to products_path do%>APPAREL<%end%>
       </li>
       <li>
         <%=link_to gifts_path do %>GIFTS<%end%>
       </li>
       <li>
-        <%=link_to jewelry_path do%>JEWELRY<%end%>
+        <%=link_to jewels_path do%>JEWELRY<%end%>
       </li>
       <li>
-        <%=link_to about_path do%>
-        ABOUT US<%end%>
+        <%=link_to about_path do%>ABOUT US<%end%>
       </li>
       <li>
         <%=link_to contact_path do%>CONTACT US<%end%>

@@ -1,0 +1,73 @@
+<div class="header">
+<%=link_to root_path do%>
+<div class="header-title-container">
+  <p class="header-title">
+    Chauncey AND Coco
+  </p>
+  <p class="header-subtitle">
+    <%= image_tag 'logo.png' %>
+    Handmade in HTX
+    <%= image_tag 'logo.png' %>
+  </p>
+</div>
+<%end%>
+</div>
+<div class="lookbook-container">
+
+  <div class="sidebar">
+    <ul>
+      <li>
+        <%= link_to collection_path do%>COLLECTION
+        <%end%>
+      </li>
+      <li>
+        <%=link_to products_path do%>APPAREL<%end%>
+      </li>
+      <li>
+        <%=link_to gifts_path do %>GIFTS<%end%>
+      </li>
+      <li>
+        <%=link_to jewels_path do%>JEWELRY<%end%>
+      </li>
+      <li>
+        <%=link_to about_path do%>ABOUT US<%end%>
+      </li>
+      <li>
+        <%=link_to contact_path do%>CONTACT US<%end%>
+      </li>
+      <li>
+        <i class="fa fa-shopping-cart" aria-hidden="true"></i>(CART)
+      </li>
+    </ul>
+
+  </div>
+  <div class="apparel-container">
+    <img src="/assets/shoes.jpg" alt="" class="apparel-image-header" />
+  <div class="apparel_list">
+<% @jewels.each do |jewelry| %>
+<div class="list_item">
+<%= link_to "/jewelry/#{jewelry.jid}" do %>
+<%= image_tag "#{jewelry.img_file}.jpg", {:class => "apparel_picture"}%>
+<p class="list-item-title"><%=jewelry.item %></p>
+<p class="list-item-price"><%= number_to_currency(jewelry.price.to_i) %>
+</p>
+</div>
+<%end%>
+<%end%>
+</div>
+</div>
+
+</div>
+
+
+<div class="footer-container">
+  <div class="follow">
+    <p> Follow us </p>
+<p><i class="fa fa-instagram fa-lg" aria-hidden="true"></i>
+<i class="fa fa-facebook-square fa-lg" aria-hidden="true"></i></p>
+  </div>
+<div class="footer">
+  <%=link_to policies_path do%>Privacy Policy<%end%> | Terms of Use | Refunds & Exchanges | &copy; chaunceyandcoco.com All Rights Reserved
+</div>
+
+</div>
