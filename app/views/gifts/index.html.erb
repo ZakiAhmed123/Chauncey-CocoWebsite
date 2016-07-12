@@ -66,7 +66,7 @@
       Follow Us
     </p>
     <p>
-      <a href="http://instagram.com/chaunceyandcoco">
+      <a href="http://instagram.com/chaunceyandcoco" target="_blank">
         <i class="fa fa-instagram fa-2x" aria-hidden="true"></i>
       </a>
     </p>
@@ -77,3 +77,19 @@
   </div>
 
 </div>
+
+<img src="assets/loading.gif" id="loading" class="hidden">
+<script>
+document.getElementById("loading").className = "visible";
+var hide = function () {
+  document.getElementById("loading").className = "hidden"
+};
+var oldLoad = window.onload;
+var newLoad = oldLoad
+  ? function () {
+    hide.call(this);
+    oldLoad.call(this)
+  }
+  : hide;
+window.onload = newLoad;
+</script>
