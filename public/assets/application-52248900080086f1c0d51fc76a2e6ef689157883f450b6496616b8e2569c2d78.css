@@ -1,0 +1,829 @@
+<!--
+////////////////////////////////////////
+////           Demo #1              ////
+////////////////////////////////////////
+-->
+
+.dropcontainer {
+	position:relative;
+	font-size: 16px;
+	color: #777;
+	}
+
+.trigger {
+	color: #777;
+	padding: 10px;
+	font-size: 16px;
+	width: 50%;
+	background: #fff url(../assets/select-arrow-open.png) 98% center no-repeat;
+	display: block;
+	border: 1px solid #ccc;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+	transition: all 0.5s ease;
+	}
+
+.trigger:hover {
+	color: #777;
+	background: #f5f5f5 url(../assets/select-arrow-open.png) 98% center no-repeat;
+	}
+
+.activetrigger {
+	color: #777;
+	padding: 10px;
+	font-size: 16px;
+	width: 50%;
+	background: #f5f5f5 url(../assets/select-arrow-close.png) 98% center no-repeat;
+	display: block;
+	border: 1px solid #ccc;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	}
+
+.activetrigger:hover {
+	background: #f5f5f5 url(../assets/select-arrow-close.png) 98% center no-repeat;
+	color: #777;
+	}
+
+.activetrigger:active {
+	background: #f5f5f5 url(../assets/select-arrow-close.png) 98% center no-repeat;
+	color: #777;
+	}
+
+.dropcontainer ul {
+	font-size: 16px;
+	border: 1px solid #ccc;
+	border-top: none;
+	background: #fff;
+	list-style-type: none;
+	padding: 10px;
+	margin: 0;
+	width: 50%;
+	z-index: 100;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	}
+
+.dropcontainer ul li {
+	padding: 5px;
+	-webkit-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+	transition: all 0.5s ease;
+	}
+
+.dropcontainer ul li:hover {
+	background: #f5f5f5;
+	outline: none;
+	}
+
+.dropcontainer ul li:first-child {
+	display: none;
+	}
+
+.dropcontainer ul li:last-child {
+	border-bottom: none;
+	}
+
+.dropdownhidden {
+	display: none;
+	}
+
+.dropdownvisible {
+	height: auto;
+	}
+
+
+<!--
+////////////////////////////////////////
+////           Demo #2              ////
+////////////////////////////////////////
+-->
+
+
+.dropcontainer_demo2 {
+	position:relative;
+	font-size: 16px;
+	color: #777;
+	}
+
+.trigger_demo2 {
+	color: #777;
+	padding: 10px;
+	font-size: 16px;
+	width: 50%;
+	background: #fff url(../assets/select-arrow-open.png) 98% center no-repeat;
+	display: block;
+	border: 1px solid #ccc;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+	transition: all 0.5s ease;
+	}
+
+.trigger_demo2:hover {
+	color: #777;
+	background: #f5f5f5 url(../assets/select-arrow-open.png) 98% center no-repeat;
+	}
+
+.activetrigger_demo2 {
+	color: #777;
+	padding: 10px;
+	font-size: 16px;
+	width: 50%;
+	background: #f5f5f5 url(../assets/select-arrow-close.png) 98% center no-repeat;
+	display: block;
+	border: 1px solid #ccc;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	}
+
+.activetrigger_demo2:hover {
+	background: #f5f5f5 url(../assets/select-arrow-close.png) 98% center no-repeat;
+	color: #777;
+	}
+
+.activetrigger_demo2:active {
+	background: #f5f5f5 url(../assets/select-arrow-close.png) 98% center no-repeat;
+	color: #777;
+	}
+
+.dropcontainer_demo2 ul {
+	font-size: 16px;
+	border: 1px solid #ccc;
+	border-top: none;
+	background: #fff;
+	list-style-type: none;
+	padding: 10px;
+	margin: 0;
+	width: 50%;
+	z-index: 100;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	}
+
+.dropcontainer_demo2 ul li {
+	padding: 5px;
+	-webkit-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+	transition: all 0.5s ease;
+	}
+
+.dropcontainer_demo2 ul li:hover {
+	background: #f5f5f5;
+	outline: none;
+	}
+
+.dropcontainer_demo2 ul li:first-child {
+	display: none;
+	}
+
+.dropcontainer_demo2 ul li:last-child {
+	border-bottom: none;
+	}
+
+.dropdownhidden_demo2 {
+	display: none;
+	}
+
+.dropdownvisible_demo2 {
+	height: auto;
+	}
+
+.dropdownvisible_demo2 {
+	height: 200px;
+	overflow-y: scroll;
+	}
+/* line 1, /Users/zakiahmed/Documents/chauncey/ChaunceyWebsite/app/assets/stylesheets/gifts.scss */
+.gift_picture {
+  width: 100%;
+  height: 100%;
+  max-width: 500px;
+  max-height: 345px;
+  padding-top: 10px;
+}
+@font-face {
+  font-family: "Helvetica Light";
+  src: url("/assets/Helvetica-Light.otf");
+}
+@font-face {
+  font-family: "Helvetica Narrow";
+  src: url("/assets/Helvetica-Narrow.otf");
+}
+@font-face {
+  font-family: "SF Light";
+  src: url("/assets/SanFranciscoDisplay-Ultralight.otf");
+}
+/* line 15, /Users/zakiahmed/Documents/chauncey/ChaunceyWebsite/app/assets/stylesheets/products.scss */
+body {
+  margin: 0px;
+  position: relative;
+}
+
+/* line 20, /Users/zakiahmed/Documents/chauncey/ChaunceyWebsite/app/assets/stylesheets/products.scss */
+.footer-container {
+  background-color: #F5F5F5;
+  font-family: Helvetica Light;
+  font-weight: bold;
+  text-align: left;
+  padding-left: 15px;
+  position: absolute;
+  border-bottom: 0;
+  height: 80x;
+  width: 98.5%;
+  display: flex;
+}
+
+/* line 32, /Users/zakiahmed/Documents/chauncey/ChaunceyWebsite/app/assets/stylesheets/products.scss */
+.footer-container a {
+  color: #888888;
+  text-align: left;
+  font-size: 15px;
+  width: 100px;
+}
+
+/* line 40, /Users/zakiahmed/Documents/chauncey/ChaunceyWebsite/app/assets/stylesheets/products.scss */
+.footer {
+  color: #888888;
+  display: flex;
+  justify-content: flex-end;
+  width: 80%;
+  justify-content: center;
+  align-items: center;
+}
+
+/* line 49, /Users/zakiahmed/Documents/chauncey/ChaunceyWebsite/app/assets/stylesheets/products.scss */
+.footer a {
+  height: 18px;
+}
+
+/* line 52, /Users/zakiahmed/Documents/chauncey/ChaunceyWebsite/app/assets/stylesheets/products.scss */
+.follow {
+  margin-top: 10px;
+  display: flex;
+}
+
+/* line 57, /Users/zakiahmed/Documents/chauncey/ChaunceyWebsite/app/assets/stylesheets/products.scss */
+.follow a {
+  width: 100%;
+  margin-left: 5px;
+}
+
+/* line 62, /Users/zakiahmed/Documents/chauncey/ChaunceyWebsite/app/assets/stylesheets/products.scss */
+.follow a:hover {
+  color: black;
+}
+
+/* line 66, /Users/zakiahmed/Documents/chauncey/ChaunceyWebsite/app/assets/stylesheets/products.scss */
+.header {
+  font-family: Moon Light;
+  letter-spacing: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 16px 0 0 0;
+  padding-bottom: 5px;
+  display: flex;
+  flex-direction: column;
+  border-bottom: 2px solid black;
+}
+
+/* line 79, /Users/zakiahmed/Documents/chauncey/ChaunceyWebsite/app/assets/stylesheets/products.scss */
+.header-title-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* line 85, /Users/zakiahmed/Documents/chauncey/ChaunceyWebsite/app/assets/stylesheets/products.scss */
+.header-subtitle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0 10px 0;
+  font-size: 40px;
+  color: gray;
+}
+
+/* line 93, /Users/zakiahmed/Documents/chauncey/ChaunceyWebsite/app/assets/stylesheets/products.scss */
+.header-subtitle img {
+  width: 50px;
+  height: 50px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+/* line 100, /Users/zakiahmed/Documents/chauncey/ChaunceyWebsite/app/assets/stylesheets/products.scss */
+.lookbook-container {
+  display: flex;
+  margin-top: 10px;
+  margin-bottom: 100px;
+}
+
+/* line 106, /Users/zakiahmed/Documents/chauncey/ChaunceyWebsite/app/assets/stylesheets/products.scss */
+.header-title {
+  width: 100%;
+  font-size: 60px;
+  margin: 10px 0 10px;
+}
+
+/* line 111, /Users/zakiahmed/Documents/chauncey/ChaunceyWebsite/app/assets/stylesheets/products.scss */
+.header a {
+  color: black;
+}
+
+/* line 115, /Users/zakiahmed/Documents/chauncey/ChaunceyWebsite/app/assets/stylesheets/products.scss */
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  width: 15%;
+  align-items: flex-start;
+  padding-left: 16px;
+  font-size: 25px;
+}
+
+/* line 124, /Users/zakiahmed/Documents/chauncey/ChaunceyWebsite/app/assets/stylesheets/products.scss */
+.sidebar a {
+  color: #424242;
+  text-decoration: none;
+}
+
+/* line 129, /Users/zakiahmed/Documents/chauncey/ChaunceyWebsite/app/assets/stylesheets/products.scss */
+.sidebar a:hover {
+  color: #7fffd4;
+}
+
+/* line 133, /Users/zakiahmed/Documents/chauncey/ChaunceyWebsite/app/assets/stylesheets/products.scss */
+.sidebar i:hover {
+  color: #7fffd4;
+}
+
+/* line 137, /Users/zakiahmed/Documents/chauncey/ChaunceyWebsite/app/assets/stylesheets/products.scss */
+.sidebar ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  margin: 0px;
+}
+
+/* line 146, /Users/zakiahmed/Documents/chauncey/ChaunceyWebsite/app/assets/stylesheets/products.scss */
+.sidebar ul li {
+  font-family: Helvetica Light;
+  margin: 5px 0 5px 0;
+}
+
+/* line 152, /Users/zakiahmed/Documents/chauncey/ChaunceyWebsite/app/assets/stylesheets/products.scss */
+.my-slider img {
+  width: 100%;
+  position: relative;
+}
+
+/* line 157, /Users/zakiahmed/Documents/chauncey/ChaunceyWebsite/app/assets/stylesheets/products.scss */
+.slide-notify {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  margin-top: 10px;
+  padding-left: 10px;
+  color: white;
+  width: 15%;
+  height: 10%;
+  font-family: Helvetica Light;
+}
+
+/* line 169, /Users/zakiahmed/Documents/chauncey/ChaunceyWebsite/app/assets/stylesheets/products.scss */
+.my-slider {
+  width: 100%;
+}
+
+/* line 174, /Users/zakiahmed/Documents/chauncey/ChaunceyWebsite/app/assets/stylesheets/products.scss */
+.unslider {
+  width: 100%;
+}
+
+/* line 178, /Users/zakiahmed/Documents/chauncey/ChaunceyWebsite/app/assets/stylesheets/products.scss */
+.unslider {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* line 185, /Users/zakiahmed/Documents/chauncey/ChaunceyWebsite/app/assets/stylesheets/products.scss */
+.unslider a {
+  display: none;
+}
+
+/* line 189, /Users/zakiahmed/Documents/chauncey/ChaunceyWebsite/app/assets/stylesheets/products.scss */
+.home-nav {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Helvetica Light;
+}
+
+/* line 197, /Users/zakiahmed/Documents/chauncey/ChaunceyWebsite/app/assets/stylesheets/products.scss */
+.home-nav p {
+  width: 16%;
+  max-width: 180px;
+  font-size: 15px;
+  margin-top: 10px;
+}
+
+/* line 204, /Users/zakiahmed/Documents/chauncey/ChaunceyWebsite/app/assets/stylesheets/products.scss */
+.home-nav a:hover {
+  color: #7fffd4;
+}
+
+/* line 211, /Users/zakiahmed/Documents/chauncey/ChaunceyWebsite/app/assets/stylesheets/products.scss */
+.img-grid {
+  display: flex;
+  width: 85%;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* line 218, /Users/zakiahmed/Documents/chauncey/ChaunceyWebsite/app/assets/stylesheets/products.scss */
+.column {
+  margin-right: 1.5%;
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+  height: 100%;
+}
+
+/* line 226, /Users/zakiahmed/Documents/chauncey/ChaunceyWebsite/app/assets/stylesheets/products.scss */
+.column img {
+  margin-bottom: 16px;
+  width: 100%;
+  max-width: 347px;
+}
+
+/* line 233, /Users/zakiahmed/Documents/chauncey/ChaunceyWebsite/app/assets/stylesheets/products.scss */
+.apparel-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 1200px;
+}
+
+/* line 239, /Users/zakiahmed/Documents/chauncey/ChaunceyWebsite/app/assets/stylesheets/products.scss */
+.apparel-image-header {
+  width: 100%;
+  height: 100%;
+  max-width: 1090px;
+  max-height: 300px;
+  margin-bottom: 20px;
+  align-self: center;
+}
+
+/* line 247, /Users/zakiahmed/Documents/chauncey/ChaunceyWebsite/app/assets/stylesheets/products.scss */
+.apparel_list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* line 253, /Users/zakiahmed/Documents/chauncey/ChaunceyWebsite/app/assets/stylesheets/products.scss */
+.number_field {
+  border: 1px solid #CCCCCC;
+  color: #7E96AA;
+  font-size: 15px;
+  font-family: SF Light;
+  width: 10%;
+  text-align: center;
+  padding: 5px;
+}
+
+/* line 262, /Users/zakiahmed/Documents/chauncey/ChaunceyWebsite/app/assets/stylesheets/products.scss */
+.list_item {
+  margin-bottom: 40px;
+}
+
+/* line 265, /Users/zakiahmed/Documents/chauncey/ChaunceyWebsite/app/assets/stylesheets/products.scss */
+.list_item a {
+  width: 100%;
+  height: 100%;
+  max-width: 350px;
+  display: flex;
+  flex-direction: column;
+  font-family: Helvetica Light;
+  color: #424242;
+  margin: 0px 10px 10px 10px;
+}
+
+/* line 277, /Users/zakiahmed/Documents/chauncey/ChaunceyWebsite/app/assets/stylesheets/products.scss */
+.list_item:hover {
+  border: 1px solid #88889D;
+}
+
+/* line 281, /Users/zakiahmed/Documents/chauncey/ChaunceyWebsite/app/assets/stylesheets/products.scss */
+.list_item img:hover {
+  opacity: 0.8;
+}
+
+/* line 286, /Users/zakiahmed/Documents/chauncey/ChaunceyWebsite/app/assets/stylesheets/products.scss */
+.list_item p {
+  margin: 0px;
+}
+
+/* line 290, /Users/zakiahmed/Documents/chauncey/ChaunceyWebsite/app/assets/stylesheets/products.scss */
+.list-item-title {
+  font-size: 20px;
+}
+
+/* line 294, /Users/zakiahmed/Documents/chauncey/ChaunceyWebsite/app/assets/stylesheets/products.scss */
+.list-item-price {
+  font-size: 17px;
+  color: #88889D;
+}
+
+/* line 299, /Users/zakiahmed/Documents/chauncey/ChaunceyWebsite/app/assets/stylesheets/products.scss */
+.jewelry_picture {
+  width: 100%;
+  height: 100%;
+  max-width: 350px;
+  align-self: center;
+}
+
+/* line 305, /Users/zakiahmed/Documents/chauncey/ChaunceyWebsite/app/assets/stylesheets/products.scss */
+.shirts_picture {
+  width: 100%;
+  height: 100%;
+  align-self: center;
+}
+
+/* line 311, /Users/zakiahmed/Documents/chauncey/ChaunceyWebsite/app/assets/stylesheets/products.scss */
+.gift_picture {
+  width: 100%;
+  height: 100%;
+  max-width: 350px;
+  align-self: center;
+}
+
+/* line 319, /Users/zakiahmed/Documents/chauncey/ChaunceyWebsite/app/assets/stylesheets/products.scss */
+.view-container {
+  display: flex;
+  width: 85%;
+}
+
+/* line 323, /Users/zakiahmed/Documents/chauncey/ChaunceyWebsite/app/assets/stylesheets/products.scss */
+.jewelry_view_picture {
+  width: 100%;
+  height: 100%;
+  max-width: 500px;
+  max-height: 375px;
+}
+
+/* line 330, /Users/zakiahmed/Documents/chauncey/ChaunceyWebsite/app/assets/stylesheets/products.scss */
+.shirts_view_picture {
+  width: 100%;
+  height: 100%;
+  max-width: 500px;
+}
+
+/* line 336, /Users/zakiahmed/Documents/chauncey/ChaunceyWebsite/app/assets/stylesheets/products.scss */
+.gift_view_picture {
+  width: 100%;
+  height: 100%;
+  max-width: 500px;
+  max-height: 350px;
+}
+
+/* line 345, /Users/zakiahmed/Documents/chauncey/ChaunceyWebsite/app/assets/stylesheets/products.scss */
+.view-image-container {
+  width: 500px;
+}
+
+/* line 348, /Users/zakiahmed/Documents/chauncey/ChaunceyWebsite/app/assets/stylesheets/products.scss */
+.item-info {
+  font-family: SF Light;
+  margin-left: 20px;
+  width: 40%;
+  color: #333333;
+}
+
+/* line 354, /Users/zakiahmed/Documents/chauncey/ChaunceyWebsite/app/assets/stylesheets/products.scss */
+.item {
+  font-weight: bold;
+  margin: 0px;
+  font-size: 40px;
+}
+
+/* line 360, /Users/zakiahmed/Documents/chauncey/ChaunceyWebsite/app/assets/stylesheets/products.scss */
+.addtocart {
+  width: 200px;
+  height: 60px;
+  border-radius: 3px;
+  font-family: Helvetica Narrow;
+  font-size: 18px;
+  text-align: center;
+  line-height: 60px;
+  font-weight: bold;
+  border: 3px solid #333333;
+  margin-top: 10px;
+}
+
+/* line 373, /Users/zakiahmed/Documents/chauncey/ChaunceyWebsite/app/assets/stylesheets/products.scss */
+.addtocart:hover {
+  background-color: #333333;
+  color: white;
+}
+
+/* line 378, /Users/zakiahmed/Documents/chauncey/ChaunceyWebsite/app/assets/stylesheets/products.scss */
+a.trigger {
+  margin-bottom: 20px;
+}
+
+/* line 383, /Users/zakiahmed/Documents/chauncey/ChaunceyWebsite/app/assets/stylesheets/products.scss */
+.about-container {
+  font-family: SF Light;
+  font-size: 25px;
+  margin-right: 15px;
+  color: #424242;
+  display: flex;
+  flex-wrap: wrap;
+  width: 83%;
+  font-weight: bold;
+}
+
+/* line 394, /Users/zakiahmed/Documents/chauncey/ChaunceyWebsite/app/assets/stylesheets/products.scss */
+.about-container img {
+  width: 100%;
+  max-width: 500px;
+  height: 100%;
+  max-height: 500px;
+}
+
+/* line 401, /Users/zakiahmed/Documents/chauncey/ChaunceyWebsite/app/assets/stylesheets/products.scss */
+.about-img-container {
+  display: flex;
+}
+
+/* line 405, /Users/zakiahmed/Documents/chauncey/ChaunceyWebsite/app/assets/stylesheets/products.scss */
+.about-text {
+  width: 40%;
+  max-width: 490px;
+  margin-left: 30px;
+  text-align: justify;
+}
+
+/* line 413, /Users/zakiahmed/Documents/chauncey/ChaunceyWebsite/app/assets/stylesheets/products.scss */
+.contact-container {
+  font-size: 30px;
+}
+
+/* line 417, /Users/zakiahmed/Documents/chauncey/ChaunceyWebsite/app/assets/stylesheets/products.scss */
+.contact-p {
+  font-family: SF Light;
+}
+
+/* line 421, /Users/zakiahmed/Documents/chauncey/ChaunceyWebsite/app/assets/stylesheets/products.scss */
+.policy-title {
+  font-family: Helvetica Light;
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+/* line 427, /Users/zakiahmed/Documents/chauncey/ChaunceyWebsite/app/assets/stylesheets/products.scss */
+.policy-text {
+  font-family: Helvetica Light;
+}
+
+/* line 432, /Users/zakiahmed/Documents/chauncey/ChaunceyWebsite/app/assets/stylesheets/products.scss */
+.hidden {
+  display: none;
+}
+
+/* line 435, /Users/zakiahmed/Documents/chauncey/ChaunceyWebsite/app/assets/stylesheets/products.scss */
+.visible {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+/**
+ *   Here's where everything gets included. You don't need
+ *   to change anything here, and doing so might break
+ *   stuff. Here be dragons and all that.
+ */
+/**
+ *   Default variables
+ *
+ *   While these can be set with JavaScript, it's probably
+ *   better and faster to just set them here, compile to
+ *   CSS and include that instead to use some of that
+ *   hardware-accelerated goodness.
+ */
+
+.unslider-nav ol {
+  list-style: none;
+  text-align: center;
+}
+.unslider-nav ol li {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  margin: 0 4px;
+  background: transparent;
+  border-radius: 5px;
+  overflow: hidden;
+  text-indent: -999em;
+  border: 2px solid black;
+  cursor: pointer;
+}
+.unslider-nav ol li.unslider-active {
+  background: black;
+  cursor: default;
+}
+.unslider{overflow:auto;margin:0;padding:0}.unslider-wrap{position:relative}.unslider-wrap.unslider-carousel>li{float:left}.unslider-vertical>ul{height:100%}.unslider-vertical li{float:none;width:100%}.unslider-fade{position:relative}.unslider-fade .unslider-wrap li{position:absolute;left:0;top:0;right:0;z-index:8}.unslider-fade .unslider-wrap li.unslider-active{z-index:10}.unslider li,.unslider ol,.unslider ul{list-style:none;margin:0;padding:0;border:none}.unslider-arrow{position:absolute;left:20px;z-index:2;cursor:pointer}.unslider-arrow.next{left:auto;right:20px}
+@font-face {
+  font-family: "Moon Light";
+  src: url("/assets/MoonLight.otf");
+}
+/* line 5, /Users/zakiahmed/Documents/chauncey/ChaunceyWebsite/app/assets/stylesheets/welcome.scss */
+.welcome-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* line 11, /Users/zakiahmed/Documents/chauncey/ChaunceyWebsite/app/assets/stylesheets/welcome.scss */
+.welcome-container img {
+  width: 25%;
+  margin-bottom: 20px;
+}
+
+/* line 16, /Users/zakiahmed/Documents/chauncey/ChaunceyWebsite/app/assets/stylesheets/welcome.scss */
+.welcome-container img:hover {
+  transform: scale(1.1, 1.1);
+}
+
+/* line 20, /Users/zakiahmed/Documents/chauncey/ChaunceyWebsite/app/assets/stylesheets/welcome.scss */
+.welcome-container p {
+  margin: 0px;
+}
+
+/* line 24, /Users/zakiahmed/Documents/chauncey/ChaunceyWebsite/app/assets/stylesheets/welcome.scss */
+.title {
+  font-size: 100px;
+  font-family: Moon Light;
+  color: black;
+}
+
+/* line 30, /Users/zakiahmed/Documents/chauncey/ChaunceyWebsite/app/assets/stylesheets/welcome.scss */
+.title:hover {
+  color: #7fffd4;
+}
+
+/* line 34, /Users/zakiahmed/Documents/chauncey/ChaunceyWebsite/app/assets/stylesheets/welcome.scss */
+.subtitle {
+  font-size: 60px;
+  font-family: Moon Light;
+  color: #B6A8A8;
+}
+
+/* line 40, /Users/zakiahmed/Documents/chauncey/ChaunceyWebsite/app/assets/stylesheets/welcome.scss */
+.subtitle:hover {
+  color: #7fffd4;
+}
+
+/* line 44, /Users/zakiahmed/Documents/chauncey/ChaunceyWebsite/app/assets/stylesheets/welcome.scss */
+a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+
+ */
+
