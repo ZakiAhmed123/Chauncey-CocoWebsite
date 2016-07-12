@@ -435,8 +435,15 @@ display:none;
 .visible {
 display:block;
 position:absolute;
-top:50%;
-left:50%;
+top:0;
+left:0;
 width:100vw;
-height:10vh;
 }
+
+// .test {
+//   display:block;
+//   position:absolute;
+//   top:0;
+//   left:0;
+//   width:100vw;
+// }
