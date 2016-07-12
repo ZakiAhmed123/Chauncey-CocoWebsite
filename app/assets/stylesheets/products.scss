@@ -14,6 +14,7 @@
 
 body {
   margin:0px;
+  position: relative;
 }
 
 .footer-container {
@@ -22,23 +23,44 @@ body {
   font-weight: bold;
   text-align: left;
   padding-left: 15px;
-  margin-top: 70px;
+  position: absolute;
+  border-bottom: 0;
+  height:80x;
+  width:98.5%;
+  display:flex;
 }
 .footer-container a {
   color:#888888;
   text-align: left;
   font-size: 15px;
   width:100px;
+
 }
 
 .footer {
   color:#888888;
   display: flex;
   justify-content: flex-end;
-  margin-right: 15px;
+  width:80%;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer a {
+  height:18px;
 }
 .follow {
   margin-top: 10px;
+  display: flex;
+}
+
+.follow a {
+  width:100%;
+  margin-left: 5px;
+}
+
+.follow a:hover {
+  color:black;
 }
 // LOOKBOOK
 .header {
@@ -78,6 +100,7 @@ body {
 .lookbook-container {
   display:flex;
   margin-top: 10px;
+  margin-bottom: 100px;
 }
 
 .header-title {
@@ -216,7 +239,7 @@ height:100%;
 .apparel-image-header {
   width:100%;
   height:100%;
-  max-width:1100px;
+  max-width:1090px;
   max-height:300px;
   margin-bottom: 20px;
   align-self: center;
@@ -273,23 +296,51 @@ height:100%;
   color:#88889D;
 }
 
-.apparel_picture {
+.jewelry_picture {
   width: 100%;
   height:100%;
   max-width: 350px;
   align-self: center;
 }
+.shirts_picture {
+  width: 100%;
+  height:100%;
+  align-self: center;
+}
+
+.gift_picture {
+  width: 100%;
+  height:100%;
+  max-width: 350px;
+  align-self: center;
+}
+
 // APPAREL VIEW
 .view-container {
   display: flex;
   width:85%;
 }
-.view_picture {
+.jewelry_view_picture {
   width:100%;
   height:100%;
   max-width:500px;
-  max-height:600px;
+  max-height: 375px;
 }
+
+.shirts_view_picture {
+  width:100%;
+  height:100%;
+  max-width: 500px;
+}
+
+.gift_view_picture {
+  width:100%;
+  height:100%;
+  max-width: 500px;
+  max-height: 350px;
+}
+
+
 
 .view-image-container {
 width:500px;

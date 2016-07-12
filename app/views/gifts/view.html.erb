@@ -43,7 +43,7 @@
 
   </div>
   <div class="view-container">
-<%= image_tag "#{@gift.img_file}.jpg", {:class => "view_picture"} %>
+<%= image_tag "#{@gift.img_file}.jpg", {:class => "gift_view_picture"} %>
 <div class="item-info">
   <p class="item"><%= @gift.item%><p>
     <p style="font-size:25px;">
@@ -81,14 +81,21 @@
   </div>
 
 </div>
+
 <div class="footer-container">
   <div class="follow">
-    <p> Follow us </p>
-<p><i class="fa fa-instagram fa-lg" aria-hidden="true"></i>
-<i class="fa fa-facebook-square fa-lg" aria-hidden="true"></i></p>
+    <p style=color:#888888>
+      Follow Us
+    </p>
+    <p>
+      <a href="http://instagram.com/chaunceyandcoco">
+        <i class="fa fa-instagram fa-2x" aria-hidden="true"></i>
+      </a>
+    </p>
   </div>
-<div class="footer">
-  <%=link_to policies_path do%>Privacy Policy<%end%> | Terms of Use | Refunds & Exchanges | &copy; chaunceyandcoco.com All Rights Reserved
-</div>
+  <div class="footer">
+    <%=link_to policies_path do%>POLICIES<%end%> &copy; chaunceyandcoco.com All Rights Reserved
+
+  </div>
 
 </div>

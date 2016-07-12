@@ -47,7 +47,7 @@
 <% @jewels.each do |jewelry| %>
 <div class="list_item">
 <%= link_to "/jewelry/#{jewelry.jid}" do %>
-<%= image_tag "#{jewelry.img_file}.jpg", {:class => "apparel_picture"}%>
+<%= image_tag "#{jewelry.img_file}.jpg", {:class => "jewelry_picture"}%>
 <p class="list-item-title"><%=jewelry.item %></p>
 <p class="list-item-price"><%= number_to_currency(jewelry.price.to_i) %>
 </p>
@@ -62,12 +62,18 @@
 
 <div class="footer-container">
   <div class="follow">
-    <p> Follow us </p>
-<p><i class="fa fa-instagram fa-lg" aria-hidden="true"></i>
-<i class="fa fa-facebook-square fa-lg" aria-hidden="true"></i></p>
+    <p style=color:#888888>
+      Follow Us
+    </p>
+    <p>
+      <a href="http://instagram.com/chaunceyandcoco">
+        <i class="fa fa-instagram fa-2x" aria-hidden="true"></i>
+      </a>
+    </p>
   </div>
-<div class="footer">
-  <%=link_to policies_path do%>Privacy Policy<%end%> | Terms of Use | Refunds & Exchanges | &copy; chaunceyandcoco.com All Rights Reserved
-</div>
+  <div class="footer">
+    <%=link_to policies_path do%>POLICIES<%end%> &copy; chaunceyandcoco.com All Rights Reserved
+
+  </div>
 
 </div>
