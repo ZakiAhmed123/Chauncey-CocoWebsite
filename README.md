@@ -8,6 +8,17 @@ Stack: Ruby on Rails, PostgreSQL, HTML, CSS, Javascript, jQuery
 email: reach.zaki.ahmed@gmail.com
 Portfolio: www.zakiahmed.org
 
+
+#SCREENSHOTS
+
+#HOMEPAGE
+
 ![alt text](app/assets/images/CCSC1.png "Home Page")
+
+#GIFT PAGE INDEX
+
 ![alt text](app/assets/images/CCSC2.png "Gift Page Index")
+
+#APPAREL VIEW PAGE
+
 ![alt text](app/assets/images/CCSC3.png "Apparel Page View")
