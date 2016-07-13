@@ -78,9 +78,7 @@
 <img src="assets/loading.gif" id="loading" class="hidden">
 
 <script>
-jQuery(document).ready(function ($) {
-  $('.my-slider').unslider();
-});
+
 
 document.getElementById("loading").className = "visible";
 var hide = function () {
@@ -94,4 +92,8 @@ var newLoad = oldLoad
   }
   : hide;
 window.onload = newLoad;
+
+jQuery(document).ready(function ($) {
+  $('.my-slider').unslider();
+});
 </script>

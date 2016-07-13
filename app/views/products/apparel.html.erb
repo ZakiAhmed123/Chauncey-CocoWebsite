@@ -1,16 +1,16 @@
 <div class="header">
-<%=link_to root_path do%>
-<div class="header-title-container">
-  <p class="header-title">
-    Chauncey AND Coco
-  </p>
-  <p class="header-subtitle">
-    <%= image_tag 'logo.png' %>
-    Handmade in HTX
-    <%= image_tag 'logo.png' %>
-  </p>
-</div>
-<%end%>
+  <%=link_to root_path do%>
+  <div class="header-title-container">
+    <p class="header-title">
+      Chauncey AND Coco
+    </p>
+    <p class="header-subtitle">
+      <%= image_tag 'logo.png' %>
+      Handmade in HTX
+      <%= image_tag 'logo.png' %>
+    </p>
+  </div>
+  <%end%>
 </div>
 <div class="lookbook-container">
 
@@ -43,19 +43,24 @@
 
   </div>
   <div class="apparel-container">
-    <img src="/assets/city.jpg" alt="" class="apparel-image-header" />
-  <div class="apparel_list">
-<% @products.each do |product| %>
-<div class="list_item">
-<%= link_to "/apparel/#{product.pid}" do %>
-<%= image_tag "#{product.img_file}.jpg", {:class => "shirts_picture"}%>
-<p class="list-item-title"><%=product.item %></p>
-<p class="list-item-price"><%= number_to_currency(product.price.to_i) %></p>
+    <div class="page-header">
+    <img src="/assets/city.jpg" alt="" class="apparel-image-header"/>
+    <p class="image-header-title">
+      APPAREL
+    </p>
 </div>
-<%end%>
-<%end%>
-</div>
-</div>
+    <div class="apparel_list">
+      <% @products.each do |product| %>
+      <div class="list_item">
+        <%= link_to "/apparel/#{product.pid}" do %>
+        <%= image_tag "#{product.img_file}.jpg", {:class => "shirts_picture"}%>
+        <p class="list-item-title"><%=product.item %></p>
+        <p class="list-item-price"><%= number_to_currency(product.price.to_i) %></p>
+      </div>
+      <%end%>
+      <%end%>
+    </div>
+  </div>
 
 </div>
 
@@ -71,7 +76,8 @@
     </p>
   </div>
   <div class="footer">
-    <%=link_to policies_path do%>POLICIES<%end%> &copy; chaunceyandcoco.com All Rights Reserved
+    <%=link_to policies_path do%>POLICIES<%end%>
+    &copy; chaunceyandcoco.com All Rights Reserved
 
   </div>
 
@@ -79,16 +85,16 @@
 
 <img src="assets/loading.gif" id="loading" class="hidden">
 <script>
-document.getElementById("loading").className = "visible";
-var hide = function () {
-  document.getElementById("loading").className = "hidden"
-};
-var oldLoad = window.onload;
-var newLoad = oldLoad
-  ? function () {
-    hide.call(this);
-    oldLoad.call(this)
-  }
-  : hide;
-window.onload = newLoad;
+  document.getElementById("loading").className = "visible";
+  var hide = function () {
+    document.getElementById("loading").className = "hidden"
+  };
+  var oldLoad = window.onload;
+  var newLoad = oldLoad
+    ? function () {
+      hide.call(this);
+      oldLoad.call(this)
+    }
+    : hide;
+  window.onload = newLoad;
 </script>

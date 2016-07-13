@@ -13,7 +13,7 @@ class GiftsController < ApplicationController
 
   def fetch_gifts
     @gifts=[]
-    CSV.foreach("gift_inventory.csv", headers:true) do |row|
+    CSV.foreach("gifts_inventory.csv", headers:true) do |row|
       gift=Gift.new
       gift.gid = row.to_h["gid"]
       gift.item = row.to_h["item"]

@@ -1,16 +1,16 @@
 <div class="header">
-<%=link_to root_path do%>
-<div class="header-title-container">
-  <p class="header-title">
-    Chauncey AND Coco
-  </p>
-  <p class="header-subtitle">
-    <%= image_tag 'logo.png' %>
-    Handmade in HTX
-    <%= image_tag 'logo.png' %>
-  </p>
-</div>
-<%end%>
+  <%=link_to root_path do%>
+  <div class="header-title-container">
+    <p class="header-title">
+      Chauncey AND Coco
+    </p>
+    <p class="header-subtitle">
+      <%= image_tag 'logo.png' %>
+      Handmade in HTX
+      <%= image_tag 'logo.png' %>
+    </p>
+  </div>
+  <%end%>
 </div>
 
 <div class="lookbook-container">
@@ -43,9 +43,9 @@
 
   </div>
   <div class="view-container">
-    <div class="view-image-container" >
-    <%= image_tag "#{@product.img_file}.jpg", {:class => "shirts_view_picture"} %>
-  </div>
+    <div class="view-image-container">
+      <%= image_tag "#{@product.img_file}.jpg", {:class => "shirts_view_picture"} %>
+    </div>
     <div class="item-info">
       <p class="item"><%= @product.item%>
         <p>
@@ -92,17 +92,47 @@
           <p style=margin:5px;font-size:25px;>
             Quantity
           </p>
-<!-- <% if @product.xs.to_i < @product.quantity.to_i %>
+          <!-- <% if @product.xs.to_i < @product.quantity.to_i %>
 <div class="">
 We only have <%=@product.xs.to_i%> in stock
 </div>
 <%end%> -->
-<p><%= product.number_field :quantity, :value => 1, :max => 5, :min => 1, :class => 'number_field' %></p>
-<%end%>
+          <p><%= product.number_field :quantity, :value => 1, :max => 5, :min => 1, :class => 'number_field' %></p>
+          <%end%>
 
           <div class="addtocart">
             ADD TO CART
           </div>
+          <p style=margin-bottom:3px;>
+            Sizing Specs
+          </p>
+          <p style="margin:0 0 5px 0">
+            &bull;<%=@product.bullet_1 %>
+          </p>
+          <p style="margin:0 0 5px 0">
+            &bull;<%=@product.bullet_2 %>
+          </p>
+          <p style="margin:0 0 5px 0">
+            &bull;<%=@product.bullet_3 %>
+          </p>
+          <p style="margin:0 0 5px 0">
+            <% if @product.bullet_4.blank? %>
+            <%else%>
+            &bull;<%=@product.bullet_4 %>
+            <%end%>
+          </p>
+          <p style="margin:0 0 5px 0">
+            <% if @product.bullet_5.blank? %>
+            <%else%>
+            &bull;<%=@product.bullet_5 %>
+            <%end%>
+          </p>
+          <p>
+            <% if @product.bullet_6.blank? %>
+            <%else%>
+            &bull;<%=@product.bullet_6 %>
+            <%end%>
+          </p>
         </div>
       </div>
 
@@ -119,7 +149,8 @@ We only have <%=@product.xs.to_i%> in stock
         </p>
       </div>
       <div class="footer">
-        <%=link_to policies_path do%>POLICIES<%end%> &copy; chaunceyandcoco.com All Rights Reserved
+        <%=link_to policies_path do%>POLICIES<%end%>
+        &copy; chaunceyandcoco.com All Rights Reserved
 
       </div>
 

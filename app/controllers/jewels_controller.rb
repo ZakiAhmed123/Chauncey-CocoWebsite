@@ -14,7 +14,7 @@ class JewelsController < ApplicationController
 
   def fetch_jewelry
     @jewels =[]
-    CSV.foreach("jewelry.csv", headers:true) do |row|
+    CSV.foreach("jewelry_inventory.csv", headers:true) do |row|
       jewel=Jewel.new
       jewel.jid = row.to_h["jid"]
       jewel.item = row.to_h["item"]

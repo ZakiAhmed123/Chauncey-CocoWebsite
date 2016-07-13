@@ -28,7 +28,7 @@ class ProductsController < ApplicationController
 
   def fetch_products
     @products=[]
-    CSV.foreach("cc_inventory.csv", headers:true) do |row|
+    CSV.foreach("shirts_inventory.csv", headers:true) do |row|
       product=Product.new
       product.pid = row.to_h["pid"]
       product.item = row.to_h["item"]
@@ -40,6 +40,12 @@ class ProductsController < ApplicationController
       product.m = row.to_h["m"]
       product.l = row.to_h["l"]
       product.xl = row.to_h["xl"]
+      product.bullet_1 = row.to_h["bullet_1"]
+      product.bullet_2 = row.to_h["bullet_2"]
+      product.bullet_3 = row.to_h["bullet_3"]
+      product.bullet_4 = row.to_h["bullet_4"]
+      product.bullet_5 = row.to_h["bullet_5"]
+      product.bullet_6 = row.to_h["bullet_6"]
       @products << product
   end
     @products
