@@ -1,19 +1,41 @@
 Rails.application.routes.draw do
 
+
+  devise_for :users
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
+  mount Payola::Engine => '/payola', as: :payola
+
   root 'products#home'
 
   get 'collection' => 'products#collection', as: :collection
   get 'about-us' => 'products#about', as: :about
   get 'contact-us' => 'products#contact', as: :contact
   get 'policies' => 'products#policies', as: :policies
+
+
   get 'apparel' => 'products#apparel', as: :products
-  get 'apparel/:pid' => 'products#view', as: :product
+  get 'apparel/:id' => 'products#view', as: :product
 
   get 'gifts' => 'gifts#index', as: :gifts
-  get 'gifts/:gid' => 'gifts#view', as: :gift
+  get 'gifts/:id' => 'gifts#view', as: :gift
 
   get 'jewelry' => 'jewels#index', as: :jewels
-  get 'jewelry/:jid' => 'jewels#view', as: :jewel
+  get 'jewelry/:id' => 'jewels#view', as: :jewel
+
+# add to cart
+  post 'cart' => 'carts#add_to_cart', as: :add_to_cart
+  get 'cart' => 'carts#view', as: :cart
+  delete 'cart' => 'carts#remove_from_cart', as: :remove_from_cart
+
+
+
+  #ORDER PROCESSING I.E. CHECKOUT
+  get 'checkout' => 'checkout#payment', as: :checkout
+  post 'checkout' => 'checkout#process_payment', as: :process_payment
+  get 'shipping' =>  'checkout#shipping', as: :shipping
+  post 'shipping' => 'checkout#process_shipping', as: :process_shipping
+
+  get 'receipts/:id' => 'checkout#receipt', as: :receipt
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

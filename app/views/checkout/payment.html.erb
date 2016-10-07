@@ -1,0 +1,210 @@
+<%= render "layouts/nav_bar.html.erb" %>
+
+<div class="checkout-nav">
+
+</div>
+<div class="checkout-phone">
+  <i class="fa fa-mobile fa-2x" aria-hidden="true"></i>
+  (281) 583 7088
+</div>
+<div class="checkout-title">
+  CHECKOUT
+</div>
+<div class="shipping-container">
+  <div class="shipping" style="margin-right:15px;">
+    <div class="summary-title">
+      <div class="">
+        1. SHIPPING
+      </div>
+        <%= link_to "EDIT", shipping_path %>
+
+    </div>
+    <div class="shipping-1">
+
+      <div class="shipping-title">
+        2. PAYMENT
+      </div>
+
+
+      <div class="shipping-content">
+
+      <%= form_tag process_payment_path, method: :post, id: "payment-form" do %>
+
+        <script
+          src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+          data-key="pk_test_UQ02f5WGJ1E2k2sUXLJcqn4C"
+          data-name="Chauncey and Coco"
+          data-image=<%= image_url('logo.png') %>
+          data-amount="<%= @order.final_price %>"
+          <% if @order.email.present?%>
+          data-email="<%= @order.email %>"
+          <%else%>
+          data-email="true"
+          <%end%>
+          data-billing-address="true"
+          data-locale="auto"
+          data-statement-descriptor="Nirvana Products" >
+        </script>
+<script>
+$(document).ready(function() {
+  $(".stripe-button-el").click();
+})
+</script>
+      <% end %>
+
+      <% if false %>
+
+
+
+        <%= form_tag process_payment_path, method: :post, id: "payment-form" do %>
+        <span class="payment-errors"></span>
+        <div id="error_explanation">
+          <% if flash[:error].present? %>
+          <p><%= flash[:error] %></p>
+          <% end %>
+        </div>
+        <div class="section">
+          <div class="shipping-label">
+            Name<span>*</span>
+          </div>
+          <%= text_field_tag :name, "", class: "name" %>
+        </div>
+        <div class="section">
+          <div class="shipping-label">
+            Card Number<span>*</span>
+          </div>
+          <%= text_field_tag :credit_card_number, "", class: "card-number" %>
+        </div>
+        <div class="section">
+          <div class="shipping-label">
+            Expiry Date<span>*</span>
+          </div>
+          <%= select_month Date.today, {}, class: "card-expiry-month" %>  <%= select_year Date.today, {start_year: Date.today.year, end_year: Date.today.year+20}, class: "card-expiry-year" %>
+        </div>
+        <div class="section">
+          <div class="shipping-label">
+            Security Code<span>*</span>
+          </div>
+          <%= number_field_tag :cvc, "",class: "card-cvc"%>
+        </div>
+
+        <div class="summary-title">
+          BILLING
+        </div>
+        <div class="section">
+          <div class="shipping-label">
+            Address Line 1<span>*</span>
+          </div>
+          <%= text_field_tag :stripeBillingAddressLine1, "", class: "card-address" %>
+        </div>
+
+        <div class="section">
+          <div class="shipping-label">
+            City<span>*</span>
+          </div>
+          <%= text_field_tag :stripeBillingAddressCity, "", class: "card-city" %>
+        </div>
+
+        <div class="section">
+          <div class="shipping-label">
+            State<span>*</span>
+          </div>
+            <%= select_tag(:stripeBillingAddressState, options_for_select(us_states, "TX"),{ :class => 'card-state' }) %>
+        </div>
+        <div class="section">
+          <div class="shipping-label">
+            Zip<span>*</span>
+          </div>
+          <%= text_field_tag :stripeBillingAddressZip, "", class: "card-zip" %>
+        </div>
+
+
+        <%= submit_tag 'PURCHASE', class:'next-step' %>
+        <div class="required">
+          <span>*</span>
+          Required Field
+
+        </div>
+
+        <%end%>
+        <%end%>
+      </div>
+
+    </div>
+
+    <div class="summary-title" style="margin-top:20px;">
+      3. RECEIPT
+    </div>
+
+  </div>
+  <div class="summary-main-container">
+
+    <div class="summary-checkout">
+      <div class="summary-title">
+        SUMMARY
+      </div>
+      <div class="summary-content">
+        <div class="piece">
+          <div class="item-alt">
+            SUBTOTAL
+          </div>
+          <div class="item-2">
+            <%= number_to_currency(@order.subtotal) %>
+          </div>
+        </div>
+        <div class="piece">
+          <div class="item-alt">
+            ESTIMATED SHIPPING
+          </div>
+          <div class="item-2">
+            <%= number_to_currency(@order.total_shipping)%>
+          </div>
+        </div>
+        <div class="piece">
+          <div class="item-alt" style="color:#7f8c8d">
+            TAX
+          </div>
+          <div class="item-2" style="color:#7f8c8d">
+            <% if @order.address_state = "TX" %>
+            <%= number_to_currency(@order.total_tax) %>
+            <%else%>
+            TAX: $0.00
+            <%end%>
+          </div>
+        </div>
+        <div class="piece-total">
+
+          <div class="item-total">
+            <%= number_to_currency(@order.final_price * 0.01) %>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="current-cart">
+      <div class="summary-title" style="margin-top:20px;margin-bottom:40px;">
+        IN YOUR CART
+      </div>
+        <% @order.order_items.each do |order_item| %>
+        <div style="display:flex">
+
+        <%= image_tag "#{order_item.img_file}.jpg", {:class => "checkout_picture"}%>
+        <div class="checkout-item-info">
+          <span style="font-family:'Open Sans',sans-serif"><%= order_item.name %></span>
+
+          <span>Quantity: <%= order_item.quantity%></span>
+
+          <span>Item Price: <%= number_to_currency(order_item.price.to_i) %></span>
+
+          <span style="color:#F76122; font-family:'Open Sans',sans-serif">Total Price: <%= number_to_currency order_item.item_price %></span>
+        </div>
+      </div>
+
+
+
+<%end%>
+</div>
+  </div>
+
+</div>

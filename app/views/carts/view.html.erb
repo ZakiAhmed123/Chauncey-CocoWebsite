@@ -1,0 +1,108 @@
+<%= render "layouts/nav_bar.html.erb" %>
+
+<div class="cart-container" style="margin-bottom:18%;">
+
+
+  <div class="bag-container">
+    <div class="bag">
+      <div class="bag-title">
+        SHOPPING BAG ITEMS (<%= @order.order_items.count %>)
+      </div>
+
+      <table>
+        <thead>
+          <tr>
+            <th>
+            </th>
+            <th>
+              Product
+            </th>
+            <th>
+              Size
+            </th>
+            <th>
+              Quantity
+            </th>
+
+            <th>
+              Price
+            </th>
+            <th>
+              Total
+            </th>
+            <th style="text-align:center; color:red">
+              <i class="fa fa-trash-o fa-lg" aria-hidden="true"></i>
+
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+
+          
+          <% @order.order_items.each do |order_item| %>
+
+          <tr>
+            <td>
+              <%= image_tag "#{order_item.img_file}.jpg", {:class => "cart_picture"}%>
+            </td>
+            <td>
+              <%= order_item.name %>
+            </td>
+            <td>
+              <%=order_item.size %>
+            </td>
+            <td>
+              <%= order_item.quantity%>
+
+            </td>
+            <td>
+              <%= number_to_currency(order_item.price) %>
+            </td>
+            <td>
+              <%= number_to_currency(order_item.item_price) %>
+            </td>
+            <td>
+              <%= link_to 'Remove Item', remove_from_cart_path(product_id: order_item.product_id), method: :delete, class: "remove-cart" %>
+            </td>
+          </tr>
+
+          <% end %>
+
+        </tbody>
+      </table>
+
+
+    </div>
+
+    <div class="summary">
+      <div class="bag-title">
+        ORDER SUMMARY
+      </div>
+      <div class="summary-values">
+        Subtotal:<%=number_to_currency(@order.subtotal) %></br>
+      </div>
+
+      <div class="summary-values">
+        Shipping: $0.00 TBD</br>
+
+      </div>
+      <div class="summary-values">
+        Tax: $0.00 (TBD)
+
+      </div>
+      <div class="summary-values-black">
+        Total: <%= number_to_currency(@order.subtotal) %>
+      </div>
+      <% if @order.cart_total > 0 %>
+    <%= link_to 'CHECKOUT', shipping_path, class: 'checkout-btn' %>
+    <%else%>
+    <%= link_to 'FIND STUFF?', products_path, class:'checkout-btn' %>
+    <%end%>
+    </div>
+  </div>
+
+
+
+</div>
+
+<%= render "layouts/footer.html.erb" %>

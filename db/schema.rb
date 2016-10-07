@@ -11,22 +11,169 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160711200040) do
+ActiveRecord::Schema.define(version: 20161007182142) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "gifts", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+  create_table "order_items", force: :cascade do |t|
+    t.integer  "order_id"
+    t.integer  "product_id"
+    t.integer  "quantity",      default: 1
+    t.decimal  "shipping_cost", default: 0.0
+    t.decimal  "price",         default: 0.0
+    t.string   "img_file"
+    t.string   "name"
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
+    t.string   "size"
   end
 
-  create_table "jewels", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+  create_table "orders", force: :cascade do |t|
+    t.datetime "purchased_at"
+    t.string   "status",        default: "cart"
+    t.text     "address_line1"
+    t.string   "address_city"
+    t.string   "address_state"
+    t.string   "address_zip"
+    t.string   "name"
+    t.string   "phone_number"
+    t.integer  "shipping_cost", default: 1
+    t.string   "email"
+    t.datetime "created_at",                     null: false
+    t.datetime "updated_at",                     null: false
+    t.integer  "user_id"
   end
+
+  create_table "payola_affiliates", force: :cascade do |t|
+    t.string   "code"
+    t.string   "email"
+    t.integer  "percent"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "payola_coupons", force: :cascade do |t|
+    t.string   "code"
+    t.integer  "percent_off"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.boolean  "active",      default: true
+  end
+
+  create_table "payola_sales", force: :cascade do |t|
+    t.string   "email"
+    t.string   "guid"
+    t.integer  "product_id"
+    t.string   "product_type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "state"
+    t.string   "stripe_id"
+    t.string   "stripe_token"
+    t.string   "card_last4"
+    t.date     "card_expiration"
+    t.string   "card_type"
+    t.text     "error"
+    t.integer  "amount"
+    t.integer  "fee_amount"
+    t.integer  "coupon_id"
+    t.boolean  "opt_in"
+    t.integer  "download_count"
+    t.integer  "affiliate_id"
+    t.text     "customer_address"
+    t.text     "business_address"
+    t.string   "stripe_customer_id"
+    t.string   "currency"
+    t.text     "signed_custom_fields"
+    t.integer  "owner_id"
+    t.string   "owner_type"
+  end
+
+  add_index "payola_sales", ["coupon_id"], name: "index_payola_sales_on_coupon_id", using: :btree
+  add_index "payola_sales", ["email"], name: "index_payola_sales_on_email", using: :btree
+  add_index "payola_sales", ["guid"], name: "index_payola_sales_on_guid", using: :btree
+  add_index "payola_sales", ["owner_id", "owner_type"], name: "index_payola_sales_on_owner_id_and_owner_type", using: :btree
+  add_index "payola_sales", ["product_id", "product_type"], name: "index_payola_sales_on_product", using: :btree
+  add_index "payola_sales", ["stripe_customer_id"], name: "index_payola_sales_on_stripe_customer_id", using: :btree
+
+  create_table "payola_stripe_webhooks", force: :cascade do |t|
+    t.string   "stripe_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "payola_subscriptions", force: :cascade do |t|
+    t.string   "plan_type"
+    t.integer  "plan_id"
+    t.datetime "start"
+    t.string   "status"
+    t.string   "owner_type"
+    t.integer  "owner_id"
+    t.string   "stripe_customer_id"
+    t.boolean  "cancel_at_period_end"
+    t.datetime "current_period_start"
+    t.datetime "current_period_end"
+    t.datetime "ended_at"
+    t.datetime "trial_start"
+    t.datetime "trial_end"
+    t.datetime "canceled_at"
+    t.integer  "quantity"
+    t.string   "stripe_id"
+    t.string   "stripe_token"
+    t.string   "card_last4"
+    t.date     "card_expiration"
+    t.string   "card_type"
+    t.text     "error"
+    t.string   "state"
+    t.string   "email"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "currency"
+    t.integer  "amount"
+    t.string   "guid"
+    t.string   "stripe_status"
+    t.integer  "affiliate_id"
+    t.string   "coupon"
+    t.text     "signed_custom_fields"
+    t.text     "customer_address"
+    t.text     "business_address"
+    t.integer  "setup_fee"
+  end
+
+  add_index "payola_subscriptions", ["guid"], name: "index_payola_subscriptions_on_guid", using: :btree
 
   create_table "products", force: :cascade do |t|
+    t.string  "name"
+    t.integer "price"
+    t.string  "size"
+    t.string  "img_file"
+    t.text    "description"
+    t.string  "bullet_1"
+    t.string  "bullet_2"
+    t.string  "bullet_3"
+    t.string  "bullet_4"
+    t.string  "bullet_5"
+    t.string  "bullet_6"
+    t.decimal "shipping_cost"
   end
+
+  create_table "users", force: :cascade do |t|
+    t.datetime "created_at",                          null: false
+    t.datetime "updated_at",                          null: false
+    t.string   "email",                  default: "", null: false
+    t.string   "encrypted_password",     default: "", null: false
+    t.string   "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.integer  "sign_in_count",          default: 0,  null: false
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.inet     "current_sign_in_ip"
+    t.inet     "last_sign_in_ip"
+  end
+
+  add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
+  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
 end

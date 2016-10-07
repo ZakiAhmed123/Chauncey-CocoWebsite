@@ -1,0 +1,30 @@
+<div class="sidebar">
+  <ul>
+    <li>
+      <%= link_to collection_path do%>COLLECTION
+      <%end%>
+    </li>
+    <li>
+      <%=link_to products_path do%>APPAREL<%end%>
+    </li>
+    <li>
+      <%=link_to gifts_path do %>GIFTS<%end%>
+    </li>
+    <li>
+      <%=link_to jewels_path do%>JEWELRY<%end%>
+    </li>
+    <li>
+      <%=link_to about_path do%>
+      ABOUT US<%end%>
+    </li>
+    <li>
+      <%=link_to contact_path do%>CONTACT US<%end%>
+    </li>
+    <li>
+      <%= link_to cart_path do %>
+      Cart <i class="fa fa-shopping-cart" aria-hidden="true" id='cart-nav'></i>
+      <%end%>
+    </li>
+  </ul>
+
+</div>

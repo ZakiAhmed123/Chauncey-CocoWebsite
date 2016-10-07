@@ -1,0 +1,88 @@
+<%= render '/layouts/nav_bar.html.erb'%>
+<div class="receipt-container">
+
+<p class="receipt-header">RECEIPT #<%= @order.id %></p>
+
+<div class="thank-you">
+  THANK YOU FOR YOUR PURCHASE
+</div>
+  <div class="" style="Font-family:'Open Sans', sans-serif; font-size:18px; text-align:center;margin-top:30px;">
+  We sent a receipt to your email <strong> <%= @order.email %></strong>. We will be processing your order and youll get an email soon about with shipping details.
+</div>
+
+
+
+</div>
+<div class="bag-container" style="margin-top:100px;">
+  <div class="bag">
+    <div class="receipt-line">Purchaser: <%= @order.email %></div>
+    <div class="receipt-line">Purchase Date : <%= local_time(@order.purchased_at) %></div>
+    <div class="receipt-line">Order ID : <%= @order.id %></div>
+    <div class="bag-title">
+      YOUR PURCHASE
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>
+            Item
+          </th>
+          <th>
+            Name
+          </th>
+          <th>
+            Quantity
+          </th>
+
+          <th>
+            Per Item Price
+          </th>
+
+
+          <th>
+            Total Shipping Cost
+          </th>
+
+          <th>
+            Total Price
+          </th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <% @order.order_items.each do |order_item| %>
+
+        <tr>
+          <td>
+            <%= image_tag "#{order_item.img_file}.jpg", {:class => "cart_picture"}%>
+          </td>
+          <td>
+            <%= order_item.name %>
+          </td>
+          <td>
+            <%= order_item.quantity %>
+          </td>
+
+          <td>
+            <%= number_to_currency(order_item.price) %>
+          </td>
+
+          <% end %>
+          <td>
+            <%= number_to_currency(@order.total_shipping) %>
+          </td>
+          <td>
+            <%= number_to_currency(@order.total_price_in_cents * 0.01) %>
+          </td>
+        </tr>
+
+
+
+      </tbody>
+    </table>
+  </div>
+</div>
+</div>
+
+<%= render '/layouts/footer.html.erb' %>

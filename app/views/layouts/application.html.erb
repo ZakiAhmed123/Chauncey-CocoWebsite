@@ -1,15 +1,39 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>ChaunceyWebsite</title>
+  <title>Chauncey&Coco</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+  <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
+<script type="text/javascript" src=" https://checkout.stripe.com/checkout.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet">
+<script type="text/javascript">
+  Stripe.setPublishableKey('pk_test_UQ02f5WGJ1E2k2sUXLJcqn4C');
+</script>
+<script type="text/javascript">
+$(window).load(function() {
+  $(".loader").delay(1000).hide(0);
+})
+</script>
 </head>
 <body>
-
+  <% flash.each do |name,msg| %>
+  <%= content_tag :div, msg, :id => "flash", class: 'flash-message' %>
+  <%end%>
+  <div class="loader">
+</div>
 <%= yield %>
 
 </body>
+<script type="text/javascript">
+$(document).ready(function () {
+  setTimeout(function () {
+    $('#flash').remove();
+  }, 2500);
+
+})
+</script>
 </html>

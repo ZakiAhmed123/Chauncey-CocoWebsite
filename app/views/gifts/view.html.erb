@@ -1,67 +1,28 @@
-<div class="header">
-<%=link_to root_path do%>
-<div class="header-title-container">
-  <p class="header-title">
-    Chauncey AND Coco
-  </p>
-  <p class="header-subtitle">
-    <%= image_tag 'logo.png' %>
-    Handmade in HTX
-    <%= image_tag 'logo.png' %>
-  </p>
-</div>
-<%end%>
-</div>
+<%= render "layouts/nav_bar.html.erb" %>
+
 <div class="lookbook-container">
 
-  <div class="sidebar">
-    <ul>
-      <li>
-        <%= link_to collection_path do%>COLLECTION
-        <%end%>
-      </li>
-      <li>
-        <%=link_to products_path do%>APPAREL<%end%>
-      </li>
-      <li>
-        <%=link_to gifts_path do %>GIFTS<%end%>
-      </li>
-      <li>
-        <%=link_to jewels_path do%>JEWELRY<%end%>
-      </li>
-      <li>
-        <%=link_to about_path do%>
-        ABOUT US<%end%>
-      </li>
-      <li>
-        <%=link_to contact_path do%>CONTACT US<%end%>
-      </li>
-      <li>
-        <i class="fa fa-shopping-cart" aria-hidden="true"></i>(CART)
-      </li>
-    </ul>
+  <%= render "layouts/sidebar.html.erb" %>
 
-  </div>
   <div class="view-container">
 <%= image_tag "#{@gift.img_file}.jpg", {:class => "gift_view_picture"} %>
 <div class="item-info">
-  <p class="item"><%= @gift.item%><p>
+  <p class="item"><%= @gift.name%><p>
     <p style="font-size:25px;">
       <%= @gift.description%>
     </p>
     <p style="font-size:30px;">
-      <%= number_to_currency(@gift.price.to_i) %>
+      <%= number_to_currency(@gift.price) %>
     </p>
     <p style=margin:5px;font-size:25px;>
-      Quantity
-    </p>
-<%= form_for @gift do |gift| %>
-    <%= gift.number_field :quantity, :value => 1, :max => 10, :min => 1, :class => 'number_field' %>
-<%end%>
+      Size & Quantity
 
-<div class="addtocart">
-      ADD TO CART
-    </div>
+    </p>
+    <%= form_for :order_item, :url => add_to_cart_path(product_id: @gift.id) do |f| %>
+    <%= f.number_field :quantity, min: 1, max:1, placeholder: "QTY", class:"number_field"%>
+    </br><%= f.submit "ADD TO CART", class:"addtocart"%>
+    <%end%>
+
     <p>
       Shipping estimate: $3.00
     </p>

@@ -1,60 +1,17 @@
-<div class="header">
-<%=link_to root_path do%>
-<div class="header-title-container">
-  <p class="header-title">
-    Chauncey AND Coco
-  </p>
-  <p class="header-subtitle">
-    <%= image_tag 'logo.png' %>
-    Handmade in HTX
-    <%= image_tag 'logo.png' %>
-  </p>
-</div>
-<%end%>
-</div>
+<%= render "layouts/nav_bar.html.erb" %>
+
 <div class="lookbook-container">
 
-  <div class="sidebar">
-    <ul>
-      <li>
-        <%= link_to collection_path do%>COLLECTION
-        <%end%>
-      </li>
-      <li>
-        <%=link_to products_path do%>APPAREL<%end%>
-      </li>
-      <li>
-        <%=link_to gifts_path do %>GIFTS<%end%>
-      </li>
-      <li>
-        <%=link_to jewels_path do%>JEWELRY<%end%>
-      </li>
-      <li>
-        <%=link_to about_path do%>
-        ABOUT US<%end%>
-      </li>
-      <li>
-        <%=link_to contact_path do%>CONTACT US<%end%>
-      </li>
-      <li>
-        <i class="fa fa-shopping-cart" aria-hidden="true"></i>(CART)
-      </li>
-    </ul>
+  <%= render "layouts/sidebar.html.erb" %>
 
-  </div>
   <div class="apparel-container">
-    <div class="page-header">
-    <img src="/assets/bg4.jpg" alt="" class="apparel-image-header"/>
-    <p class="image-header-title">
-      GIFTS
-    </p>
-</div>
+
   <div class="apparel_list">
-<% @gifts.each do |gift| %>
+<% @gifts[6..8].each do |gift| %>
 <div class="list_item">
-<%= link_to "/gifts/#{gift.gid}" do %>
+<%= link_to "/gifts/#{gift.id}" do %>
 <%= image_tag "#{gift.img_file}.jpg", {:class => "gift_picture"}%>
-<p class="list-item-title"><%=gift.item %></p>
+<p class="list-item-title"><%=gift.name %></p>
 <p class="list-item-price"><%= number_to_currency(gift.price.to_i) %>
 </p>
 </div>
@@ -80,21 +37,5 @@
     <%=link_to policies_path do%>POLICIES<%end%> &copy; chaunceyandcoco.com All Rights Reserved
 
   </div>
-FUCK
-</div>
 
-<img src="assets/loading.gif" id="loading" class="hidden">
-<script>
-document.getElementById("loading").className = "visible";
-var hide = function () {
-  document.getElementById("loading").className = "hidden"
-};
-var oldLoad = window.onload;
-var newLoad = oldLoad
-  ? function () {
-    hide.call(this);
-    oldLoad.call(this)
-  }
-  : hide;
-window.onload = newLoad;
-</script>
+</div>

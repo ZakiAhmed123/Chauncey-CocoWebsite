@@ -219,11 +219,11 @@
   src: url("/assets/Helvetica-Light.otf");
 }
 @font-face {
-  font-family: "Helvetica Narrow";
+  font-family: "'Open Sans', sans-serif;";
   src: url("/assets/Helvetica-Narrow.otf");
 }
 @font-face {
-  font-family: "SF Light";
+  font-family: "'Open Sans', sans-serif;";
   src: url("/assets/SanFranciscoDisplay-Ultralight.otf");
 }
 /* line 15, /Users/zakiahmed/Documents/chauncey/ChaunceyWebsite/app/assets/stylesheets/products.scss */
@@ -235,7 +235,7 @@ body {
 /* line 20, /Users/zakiahmed/Documents/chauncey/ChaunceyWebsite/app/assets/stylesheets/products.scss */
 .footer-container {
   background-color: #F5F5F5;
-  font-family: Helvetica Light;
+  font-family: 'Open Sans', sans-serif;
   font-weight: bold;
   text-align: left;
   padding-left: 15px;
@@ -288,7 +288,7 @@ body {
 
 /* line 66, /Users/zakiahmed/Documents/chauncey/ChaunceyWebsite/app/assets/stylesheets/products.scss */
 .header {
-  font-family: Moon Light;
+  font-family: 'Open Sans', sans-serif;;
   letter-spacing: 10px;
   display: flex;
   justify-content: center;
@@ -383,7 +383,7 @@ body {
 
 /* line 146, /Users/zakiahmed/Documents/chauncey/ChaunceyWebsite/app/assets/stylesheets/products.scss */
 .sidebar ul li {
-  font-family: Helvetica Light;
+  font-family: 'Open Sans', sans-serif;
   margin: 5px 0 5px 0;
 }
 
@@ -403,7 +403,7 @@ body {
   color: white;
   width: 15%;
   height: 10%;
-  font-family: Helvetica Light;
+  font-family: 'Open Sans', sans-serif;
 }
 
 /* line 169, /Users/zakiahmed/Documents/chauncey/ChaunceyWebsite/app/assets/stylesheets/products.scss */
@@ -435,7 +435,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: Helvetica Light;
+  font-family: 'Open Sans', sans-serif;
 }
 
 /* line 197, /Users/zakiahmed/Documents/chauncey/ChaunceyWebsite/app/assets/stylesheets/products.scss */
@@ -504,7 +504,7 @@ body {
   border: 1px solid #CCCCCC;
   color: #7E96AA;
   font-size: 15px;
-  font-family: SF Light;
+  font-family: 'Open Sans', sans-serif;;
   width: 10%;
   text-align: center;
   padding: 5px;
@@ -522,7 +522,7 @@ body {
   max-width: 350px;
   display: flex;
   flex-direction: column;
-  font-family: Helvetica Light;
+  font-family: 'Open Sans', sans-serif;
   color: #424242;
   margin: 0px 10px 10px 10px;
 }
@@ -612,7 +612,7 @@ body {
 
 /* line 348, /Users/zakiahmed/Documents/chauncey/ChaunceyWebsite/app/assets/stylesheets/products.scss */
 .item-info {
-  font-family: SF Light;
+  font-family: 'Open Sans', sans-serif;;
   margin-left: 20px;
   width: 40%;
   color: #333333;
@@ -630,7 +630,7 @@ body {
   width: 200px;
   height: 60px;
   border-radius: 3px;
-  font-family: Helvetica Narrow;
+  font-family: 'Open Sans', sans-serif;;
   font-size: 18px;
   text-align: center;
   line-height: 60px;
@@ -652,7 +652,7 @@ a.trigger {
 
 /* line 383, /Users/zakiahmed/Documents/chauncey/ChaunceyWebsite/app/assets/stylesheets/products.scss */
 .about-container {
-  font-family: SF Light;
+  font-family: 'Open Sans', sans-serif;;
   font-size: 25px;
   margin-right: 15px;
   color: #424242;
@@ -690,19 +690,19 @@ a.trigger {
 
 /* line 417, /Users/zakiahmed/Documents/chauncey/ChaunceyWebsite/app/assets/stylesheets/products.scss */
 .contact-p {
-  font-family: SF Light;
+  font-family: 'Open Sans', sans-serif;;
 }
 
 /* line 421, /Users/zakiahmed/Documents/chauncey/ChaunceyWebsite/app/assets/stylesheets/products.scss */
 .policy-title {
-  font-family: Helvetica Light;
+  font-family: 'Open Sans', sans-serif;
   font-size: 20px;
   margin-top: 10px;
 }
 
 /* line 427, /Users/zakiahmed/Documents/chauncey/ChaunceyWebsite/app/assets/stylesheets/products.scss */
 .policy-text {
-  font-family: Helvetica Light;
+  font-family: 'Open Sans', sans-serif;
 }
 
 /* line 432, /Users/zakiahmed/Documents/chauncey/ChaunceyWebsite/app/assets/stylesheets/products.scss */
@@ -753,7 +753,7 @@ a.trigger {
 }
 .unslider{overflow:auto;margin:0;padding:0}.unslider-wrap{position:relative}.unslider-wrap.unslider-carousel>li{float:left}.unslider-vertical>ul{height:100%}.unslider-vertical li{float:none;width:100%}.unslider-fade{position:relative}.unslider-fade .unslider-wrap li{position:absolute;left:0;top:0;right:0;z-index:8}.unslider-fade .unslider-wrap li.unslider-active{z-index:10}.unslider li,.unslider ol,.unslider ul{list-style:none;margin:0;padding:0;border:none}.unslider-arrow{position:absolute;left:20px;z-index:2;cursor:pointer}.unslider-arrow.next{left:auto;right:20px}
 @font-face {
-  font-family: "Moon Light";
+  font-family: "'Open Sans', sans-serif;";
   src: url("/assets/MoonLight.otf");
 }
 /* line 5, /Users/zakiahmed/Documents/chauncey/ChaunceyWebsite/app/assets/stylesheets/welcome.scss */
@@ -783,7 +783,7 @@ a.trigger {
 /* line 24, /Users/zakiahmed/Documents/chauncey/ChaunceyWebsite/app/assets/stylesheets/welcome.scss */
 .title {
   font-size: 100px;
-  font-family: Moon Light;
+  font-family: 'Open Sans', sans-serif;;
   color: black;
 }
 
@@ -795,7 +795,7 @@ a.trigger {
 /* line 34, /Users/zakiahmed/Documents/chauncey/ChaunceyWebsite/app/assets/stylesheets/welcome.scss */
 .subtitle {
   font-size: 60px;
-  font-family: Moon Light;
+  font-family: 'Open Sans', sans-serif;;
   color: #B6A8A8;
 }
 

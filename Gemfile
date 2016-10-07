@@ -43,11 +43,20 @@ group :development do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+  gem 'better_errors'
+  gem "letter_opener"
+
 end
 
-ruby '2.2.1'
+ruby '2.3.0'
 
 group :production do
   gem 'rails_12factor'
-  gem 'unicorn'
+  # gem 'unicorn'
 end
+
+gem 'stripe'
+gem 'payola-payments'
+gem 'rails_admin'
+gem 'devise'
+gem 'local_time'

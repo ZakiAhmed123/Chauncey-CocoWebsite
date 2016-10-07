@@ -2,13 +2,9 @@
   <%=link_to root_path do%>
   <div class="header-title-container">
     <p class="header-title">
-      Chauncey AND Coco
+      <%= image_tag 'logo.png' %>  CHAUNCEY AND COCO   <%= image_tag 'logo.png' %>
     </p>
-    <p class="header-subtitle">
-      <%= image_tag 'logo.png' %>
-      Handmade in HTX
-      <%= image_tag 'logo.png' %>
-    </p>
+
   </div>
 
   <%end%>
@@ -33,26 +29,20 @@
       <%=link_to contact_path do%>CONTACT<%end%>
     </p>
     <p>
-      <i class="fa fa-shopping-cart" aria-hidden="true"></i>(CART)
+      <%= link_to cart_path do %><i class="fa fa-shopping-cart" aria-hidden="true"></i>(CART) <%end%>
     </p>
   </div>
 </div>
 
-<div class="my-slider">
+<div class="automatic-slider">
   <ul>
-    <li><img src="/assets/bike-wide.jpg" alt=""/></li>
-    <li><img src="/assets/slider2.jpg" alt=""/></li>
-    <li><img src="/assets/slider3.jpg" alt=""/></li>
-    <li><img src="/assets/slider4.jpg" alt=""/></li>
-    <li><img src="/assets/slider1.jpg" alt=""/></li>
+    <li><%= image_tag 'bike-wide.jpg'%></li>
+    <li><%= image_tag 'slider2'%></li>
+    <li><%= image_tag 'slider3'%></li>
+    <li><%= image_tag 'slider4'%></li>
+    <li><%= image_tag 'slider1'%></li>
   </ul>
-  <p class="slide-notify">
-    Press
-    <i class="fa fa-chevron-left" aria-hidden="true"></i>
-    &
-    <i class="fa fa-chevron-right" aria-hidden="true"></i>
-    for Slider
-  </p>
+
 </div>
 
 <div class="footer-container">
@@ -75,25 +65,9 @@
 </div>
 
 </div>
-<img src="assets/loading.gif" id="loading" class="hidden">
-
 <script>
 
-
-document.getElementById("loading").className = "visible";
-var hide = function () {
-  document.getElementById("loading").className = "hidden"
-};
-var oldLoad = window.onload;
-var newLoad = oldLoad
-  ? function () {
-    hide.call(this);
-    oldLoad.call(this)
-  }
-  : hide;
-window.onload = newLoad;
-
 jQuery(document).ready(function ($) {
-  $('.my-slider').unslider();
+  $('.automatic-slider').unslider({autoplay: true, arrows: false});
 });
 </script>

@@ -13,3 +13,27 @@
  *= require_tree .
  *= require_self
  */
+ .loader {
+ 	position: fixed;
+ 	left: 0px;
+ 	top: 0px;
+ 	width: 100%;
+ 	height: 100%;
+ 	z-index: 9999;
+ 	background: image-url(#{'loading.gif'}) 50% 50% no-repeat rgb(249,249,249);
+   background-color: white;
+ }
+
+
+ .flash-message {
+   color:white;
+   background-color: #1abc9c;
+   width:100%;
+   height:35px;
+   font-family: 'Open Sans', sans-serif; font-weight:300;
+   text-align: center;
+   line-height: 35px;
+   position:absolute;
+   top:15%;
+   z-index: 9999;
+ }
